@@ -1,0 +1,8 @@
+add_watermark_mulcud
+add_watermark_qftbkb
+read_data
+dct_step
+idct_step
+integer_idct
+write_data
+add_watermark

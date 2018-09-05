@@ -1,0 +1,1454 @@
+INFO: [HLS 200-0] Workspace E:/FPGA_School/dct_hls/solution4 opened at Fri Jul 20 11:58:38 +0800 2018
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Command     config_clock returned 0; 0.001 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.lib 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.lib 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.lib 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.006 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.lib 
+Command         ap_source returned 0; 0.001 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.lib 
+Command         ap_source returned 0; 0.001 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.02 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_old.lib 
+Command       ap_source returned 0; 0.004 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_vivado.lib 
+Command       ap_source returned 0; 0.004 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0.003 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.003 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0.004 sec.
+Command       ap_source returned 0; 0.015 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Command       ap_source returned 0; 0.001 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0.004 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.002 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0.003 sec.
+Command       ap_source returned 0; 0.014 sec.
+Command     import_lib returned 0; 0.078 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.004 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.008 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.012 sec.
+Command           ap_source returned 0; 0.02 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.017 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.013 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.004 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.121 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.189 sec.
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.192 sec.
+Command     ap_source returned 0; 0.192 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_hp.lib 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.004 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0.021 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0.001 sec.
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.025 sec.
+Command       ap_source returned 0; 0.026 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Command       ap_source returned 0; 0.002 sec.
+Command     import_lib returned 0; 0.042 sec.
+Execute     source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.004 sec.
+Command     ap_source returned 0; 0.005 sec.
+Execute     set_part xcvu9p-flga2104-2-i 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2-i 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         license_isbetapart xcvu9p 
+Command         license_isbetapart returned 1; 0.071 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Command         config_chip_info returned 0; 0.001 sec.
+Execute         config_chip_info -quiet -speed medium 
+Command         config_chip_info returned 0; 0 sec.
+Command       add_library returned 0; 0.081 sec.
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Command       add_library returned 0; 0.005 sec.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2-i'
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     set_part returned 0; 0.215 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Execute     config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_chip_info -quiet -speed medium 
+Command     config_chip_info returned 0; 0 sec.
+Command   open_solution returned 0; 0.625 sec.
+Execute   set_part xcvu9p-flga2104-2-i 
+Execute     add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2-i 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       license_isbetapart xcvu9p 
+Command       license_isbetapart returned 1; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Command     add_library returned 0; 0.005 sec.
+Execute     add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     add_library returned 0; 0.003 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Command   set_part returned 0; 0.091 sec.
+Execute   create_clock -period 10 -name default 
+Command   create_clock returned 0; 0.003 sec.
+Execute   source ./dct_hls/solution4/directives.tcl 
+Execute     set_directive_unroll quantificat/RD_Loop_Row 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+Command     set_directive_unroll returned 0; 0.003 sec.
+Execute     set_directive_unroll quantificat/RD_Loop_Col 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+Command     set_directive_unroll returned 0; 0.036 sec.
+Execute     set_directive_unroll integer_idct/RD_Loop_Row 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+Command     set_directive_unroll returned 0; 0.023 sec.
+Execute     set_directive_unroll integer_idct/RD_Loop_Col 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+Command     set_directive_unroll returned 0; 0.034 sec.
+Execute     set_directive_pipeline img_proc/Row_Loop 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Command     set_directive_pipeline returned 0; 0.022 sec.
+Execute     set_directive_pipeline read_data 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Command     set_directive_pipeline returned 0; 0.044 sec.
+Execute     set_directive_pipeline write_data 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Command     set_directive_pipeline returned 0; 0.021 sec.
+Command   ap_source returned 0; 0.186 sec.
+Execute   csynth_design 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -VP9_rom_infer_simplify=0 -ng=0 -g=0 -opt_fp=0 -enable_clang39=0 
+INFO: [HLS 200-10] Analyzing design file 'dct_hls/dct.cpp' ...
+INFO: [HLS 200-0] Compiling one TU...
+Execute       is_m_axi_addr64 
+Command       is_m_axi_addr64 returned 0; 0 sec.
+INFO: [HLS 200-0] Handling dct_hls/dct.cpp as C++
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       is_encrypted dct_hls/dct.cpp 
+Command       is_encrypted returned 0; 0.001 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls  -fno-exceptions  -D__llvm__  -E "dct_hls/dct.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-exceptions -D__llvm__ -E dct_hls/dct.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp
+Command       clang returned 0; 1.52 sec.
+INFO: [HLS 200-0] Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp"  -o "E:/FPGA_School/dct_hls/solution4/.autopilot/db/useless.bc"  
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/useless.bc
+Command       clang returned 0; 2.373 sec.
+INFO: [HLS 200-0] GCC PP time: 3 seconds per iteration
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'UNROLL' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+INFO: [HLS 200-0] Setting directive 'PIPELINE' 
+Execute       list_core -type functional_unit 
+Command       list_core returned 0; 0 sec.
+INFO: [HLS 200-0] CDT Preprocessing...
+INFO: [HLS 200-0] Marker-Pragma convertor: E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp.ap-line.cpp E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp.ap-line.cpp.CXX 1
+INFO: [HLS 200-0] Converting Markers to Pragmas...
+Execute       cdt  "E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp.ap-line.cpp"  -m "img_proc" -o "E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp.ap-cdt.cpp" --pp --directive E:/FPGA_School/dct_hls/solution4/solution4.directive --source E:/FPGA_School/dct_hls/dct.cpp --error E:/FPGA_School/dct_hls/solution4/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Double_Pump_Mac16 DSP_Double_Pump_Mac8 DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl E:/FPGA_School/dct_hls/solution4/.autopilot/db --ca --es --gf --pd --p2d E:/FPGA_School/dct_hls/solution4/.autopilot/db --sd --scff E:/FPGA_School/dct_hls/solution4/.autopilot/db/.systemc_flag --ad 
+Command       cdt returned 0; 7.863 sec.
+INFO: [HLS 200-0] Marker-Pragma convertor: E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pp.0.cpp.ap-cdt.cpp E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pragma.0.cpp E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pragma.0.cpp.ap-line.CXX 0
+INFO: [HLS 200-0] Converting Pragmas to Markers...
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-0] Pragma Handling...
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2017.4/msys" -hls  -fno-exceptions  -D__llvm__  -E "E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pragma.2.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -fno-exceptions -D__llvm__ -E E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pragma.2.cpp
+Command       clang returned 0; 1.288 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Processing labels
+Execute       clang  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot" -I "C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.g.bc" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2017.4/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot -I C:/Xilinx/Vivado/2017.4/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.g.bc
+Command       clang returned 0; 2.472 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/ve_warning.tcl 
+Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-10] Validating synthesis directives ...
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:20 . Memory (MB): peak = 100.176 ; gain = 44.844
+INFO: [HLS 200-0] Linking Release ...
+Execute       llvm-ld E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.bc -hls-opt -except-internalize img_proc -LC:/Xilinx/Vivado/2017.4/win64/lib -lm_basic -lhlsmc++ -lhlsm -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o 
+Command       llvm-ld returned 0; 0.796 sec.
+Execute       disassemble E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o 
+Execute         is_encrypted E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.bc 
+Command         is_encrypted returned 0; 0.001 sec.
+Command       disassemble returned 0; 0.575 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-0] Linking Debug ...
+Execute       llvm-ld E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct.g.bc -hls-opt -except-internalize img_proc -LC:/Xilinx/Vivado/2017.4/win64/lib -lm_basic -lhlsmc++ -lhlsm -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g 
+Command       llvm-ld returned 0; 0.835 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:22 . Memory (MB): peak = 100.199 ; gain = 44.867
+Execute       ::config_rtl 
+Command       config_rtl returned 0; 0 sec.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 -enable_clang39=0 -VP9_rom_infer_simplify=0 
+Execute         cleanup_all_models 
+Command         cleanup_all_models returned 0; 0 sec.
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.pp.bc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.pp.0.bc -f 
+Command         transform returned 0; 0.093 sec.
+Execute         llvm-ld E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2017.4/win64/lib -lfloatconversion -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.0 
+Command         llvm-ld returned 0; 0.643 sec.
+INFO: [HLS 200-0] Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top img_proc -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.0.bc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform returned 0; 0.263 sec.
+Execute         disassemble E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.1 E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.1 
+Execute           is_encrypted E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.1.bc 
+Command           is_encrypted returned 0; 0.001 sec.
+Command         disassemble returned 0; 0.867 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:24 . Memory (MB): peak = 113.199 ; gain = 57.867
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-0] Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.1.bc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'integer_dct' into 'add_watermark' (dct_hls/dct.cpp:129) automatically.
+INFO: [XFORM 203-602] Inlining function 'quantificat' into 'add_watermark' (dct_hls/dct.cpp:131) automatically.
+INFO: [XFORM 203-602] Inlining function 'integer_idct' into 'add_watermark' (dct_hls/dct.cpp:150) automatically.
+Command         transform returned 0; 0.299 sec.
+INFO: [HLS 200-0] Checking Synthesizability 2/2..
+Execute         transform -syn-check E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.2.prechk.bc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform returned 0; 0.093 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:24 . Memory (MB): peak = 119.449 ; gain = 64.117
+INFO: [HLS 200-0] Compiler optimizing ...
+INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.g.1.bc to E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.1.bc
+INFO: [HLS 200-0] Presyn 1...
+Execute         transform -hls -tmp E:/FPGA_School/dct_hls/solution4/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -simplifycfg -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.1.bc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'write_data' (dct_hls/dct.cpp:106).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'integer_idct' (dct_hls/dct.cpp:73).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'quantificat' (dct_hls/dct.cpp:50).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'read_data' (dct_hls/dct.cpp:94).
+INFO: [XFORM 203-501] Unrolling loop 'WR_Loop_Row' (dct_hls/dct.cpp:111) in function 'write_data' completely.
+INFO: [XFORM 203-501] Unrolling loop 'WR_Loop_Col' (dct_hls/dct.cpp:114) in function 'write_data' completely.
+INFO: [XFORM 203-501] Unrolling loop 'RD_Loop_Row' (dct_hls/dct.cpp:82) in function 'integer_idct' completely.
+INFO: [XFORM 203-501] Unrolling loop 'RD_Loop_Col' (dct_hls/dct.cpp:84) in function 'integer_idct' completely.
+INFO: [XFORM 203-501] Unrolling loop 'RD_Loop_Row' (dct_hls/dct.cpp:55) in function 'quantificat' completely.
+INFO: [XFORM 203-501] Unrolling loop 'RD_Loop_Col' (dct_hls/dct.cpp:57) in function 'quantificat' completely.
+INFO: [XFORM 203-501] Unrolling loop 'RD_Loop_Row' (dct_hls/dct.cpp:99) in function 'read_data' completely.
+INFO: [XFORM 203-501] Unrolling loop 'RD_Loop_Col' (dct_hls/dct.cpp:102) in function 'read_data' completely.
+INFO: [XFORM 203-102] Partitioning array 'buf.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp' (dct_hls/dct.cpp:67) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp.0' (dct_hls/dct.cpp:67) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp.1' (dct_hls/dct.cpp:67) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp.2' (dct_hls/dct.cpp:67) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp.3' (dct_hls/dct.cpp:67) automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'qsrc.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'qsrc.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'qsrc.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'qsrc.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'qdst.V.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'qdst.V.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'qdst.V.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'qdst.V.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'isrc.V.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'isrc.V.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'isrc.V.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'isrc.V.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'idst.V.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'idst.V.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'idst.V.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'idst.V.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp.V' (dct_hls/dct.cpp:75) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp.V.0' (dct_hls/dct.cpp:75) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp.V.1' (dct_hls/dct.cpp:75) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp.V.2' (dct_hls/dct.cpp:75) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp.V.3' (dct_hls/dct.cpp:75) automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.V.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.V.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.V.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'src.V.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'out.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'out.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'out.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'out.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_in' (dct_hls/dct.cpp:119) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_dct' (dct_hls/dct.cpp:120) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_qft.V' (dct_hls/dct.cpp:121) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_out' (dct_hls/dct.cpp:122) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_in.0' (dct_hls/dct.cpp:119) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_in.1' (dct_hls/dct.cpp:119) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_in.2' (dct_hls/dct.cpp:119) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_in.3' (dct_hls/dct.cpp:119) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_dct.0' (dct_hls/dct.cpp:120) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_dct.1' (dct_hls/dct.cpp:120) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_dct.2' (dct_hls/dct.cpp:120) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_dct.3' (dct_hls/dct.cpp:120) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_qft.V.0' (dct_hls/dct.cpp:121) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_qft.V.1' (dct_hls/dct.cpp:121) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_qft.V.2' (dct_hls/dct.cpp:121) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_temp_qft.V.3' (dct_hls/dct.cpp:121) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_out.0' (dct_hls/dct.cpp:122) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_out.1' (dct_hls/dct.cpp:122) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_out.2' (dct_hls/dct.cpp:122) automatically.
+INFO: [XFORM 203-102] Partitioning array 'buf_2d_out.3' (dct_hls/dct.cpp:122) automatically.
+INFO: [XFORM 203-102] Partitioning array 'indata' (dct_hls/dct.cpp:160) automatically.
+INFO: [XFORM 203-102] Partitioning array 'outdata' (dct_hls/dct.cpp:160) automatically.
+INFO: [XFORM 203-602] Inlining function 'integer_dct' into 'add_watermark' (dct_hls/dct.cpp:129) automatically.
+INFO: [XFORM 203-602] Inlining function 'quantificat' into 'add_watermark' (dct_hls/dct.cpp:131) automatically.
+Command         transform returned 0; 0.889 sec.
+INFO: [HLS 200-0] Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.1.tmp.bc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (dct_hls/dct.cpp:117:27) to (dct_hls/dct.cpp:154:1) in function 'add_watermark'... converting 4 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'dct_step' (dct_hls/dct.cpp:4)...12 expression(s) balanced.
+Command         transform returned 0; 0.26 sec.
+Execute         disassemble E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.2 E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.2 
+Execute           is_encrypted E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.2.bc 
+Command           is_encrypted returned 0; 0.001 sec.
+Command         disassemble returned 0; 0.774 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:26 . Memory (MB): peak = 148.996 ; gain = 93.664
+INFO: [HLS 200-0] Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -directive-preproc -interface-gen -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.2.bc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform returned 0; 1.47 sec.
+Execute         disassemble E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.3 E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.3 
+Execute           is_encrypted E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.o.3.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.84 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:29 . Memory (MB): peak = 202.895 ; gain = 147.563
+INFO: [HLS 200-0] Finish building internal data model.
+Command       opt_and_import_c returned 0; 6.808 sec.
+Command     elaborate returned 0; 26.882 sec.
+Execute     autosyn 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-0] Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'img_proc' ...
+Execute       ap_set_top_model img_proc 
+Command       ap_set_top_model returned 0; 0 sec.
+Execute       get_model_list img_proc -filter all-wo-channel -topdown 
+Command       get_model_list returned 0; 0 sec.
+Execute       preproc_iomode -model img_proc 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model add_watermark 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model write_data 
+Command       preproc_iomode returned 0; 0.001 sec.
+Execute       preproc_iomode -model integer_idct 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model idct_step 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model dct_step 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model read_data 
+Command       preproc_iomode returned 0; 0.001 sec.
+Execute       get_model_list img_proc -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for configure: read_data dct_step idct_step integer_idct write_data add_watermark img_proc
+INFO: [HLS 200-0] Configuring Module : read_data ...
+Execute       set_default_model read_data 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit read_data 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : dct_step ...
+Execute       set_default_model dct_step 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit dct_step 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : idct_step ...
+Execute       set_default_model idct_step 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit idct_step 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : integer_idct ...
+Execute       set_default_model integer_idct 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit integer_idct 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : write_data ...
+Execute       set_default_model write_data 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit write_data 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : add_watermark ...
+Execute       set_default_model add_watermark 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit add_watermark 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : img_proc ...
+Execute       set_default_model img_proc 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit img_proc 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for preprocess: read_data dct_step idct_step integer_idct write_data add_watermark img_proc
+INFO: [HLS 200-0] Preprocessing Module: read_data ...
+Execute       set_default_model read_data 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model read_data 
+Command       cdfg_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess read_data 
+Command       rtl_gen_preprocess returned 0; 0.002 sec.
+INFO: [HLS 200-0] Preprocessing Module: dct_step ...
+Execute       set_default_model dct_step 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model dct_step 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess dct_step 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Preprocessing Module: idct_step ...
+Execute       set_default_model idct_step 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model idct_step 
+Command       cdfg_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess idct_step 
+Command       rtl_gen_preprocess returned 0; 0.002 sec.
+INFO: [HLS 200-0] Preprocessing Module: integer_idct ...
+Execute       set_default_model integer_idct 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model integer_idct 
+Command       cdfg_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess integer_idct 
+Command       rtl_gen_preprocess returned 0; 0.002 sec.
+INFO: [HLS 200-0] Preprocessing Module: write_data ...
+Execute       set_default_model write_data 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model write_data 
+Command       cdfg_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess write_data 
+Command       rtl_gen_preprocess returned 0; 0.002 sec.
+INFO: [HLS 200-0] Preprocessing Module: add_watermark ...
+Execute       set_default_model add_watermark 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model add_watermark 
+Command       cdfg_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess add_watermark 
+Command       rtl_gen_preprocess returned 0; 0.002 sec.
+INFO: [HLS 200-0] Preprocessing Module: img_proc ...
+Execute       set_default_model img_proc 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model img_proc 
+Command       cdfg_preprocess returned 0; 0.004 sec.
+Execute       rtl_gen_preprocess img_proc 
+WARNING: [SYN 201-107] Renaming port name 'img_proc/out' to 'img_proc/out_r' to avoid the conflict with HDL keywords or other object names.
+Command       rtl_gen_preprocess returned 0; 0.025 sec.
+INFO: [HLS 200-0] Model list for synthesis: read_data dct_step idct_step integer_idct write_data add_watermark img_proc
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_data'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model read_data 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model read_data 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'read_data'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 29.228 seconds; current allocated memory: 159.327 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.016 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.sched.adb -f 
+Command       db_write returned 0; 0.05 sec.
+INFO: [HLS 200-0] Finish scheduling read_data.
+Execute       set_default_model read_data 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model read_data 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=read_data
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.117 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.352 seconds; current allocated memory: 159.468 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.017 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.bind.adb -f 
+Command       db_write returned 0; 0.052 sec.
+INFO: [HLS 200-0] Finish binding read_data.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dct_step'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dct_step 
+Command       set_default_model returned 0; 0.001 sec.
+Execute       schedule -model dct_step 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'dct_step'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.272 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.462 seconds; current allocated memory: 159.734 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.041 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.sched.adb -f 
+Command       db_write returned 0; 0.086 sec.
+INFO: [HLS 200-0] Finish scheduling dct_step.
+Execute       set_default_model dct_step 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model dct_step 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=dct_step
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.167 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.443 seconds; current allocated memory: 159.986 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.125 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.bind.adb -f 
+Command       db_write returned 0; 0.06 sec.
+INFO: [HLS 200-0] Finish binding dct_step.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'idct_step'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model idct_step 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model idct_step 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'idct_step'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.301 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.602 seconds; current allocated memory: 160.217 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.059 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.sched.adb -f 
+Command       db_write returned 0; 0.053 sec.
+INFO: [HLS 200-0] Finish scheduling idct_step.
+Execute       set_default_model idct_step 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model idct_step 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=idct_step
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.202 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.471 seconds; current allocated memory: 160.503 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.171 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.bind.adb -f 
+Command       db_write returned 0; 0.036 sec.
+INFO: [HLS 200-0] Finish binding idct_step.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'integer_idct'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model integer_idct 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model integer_idct 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'integer_idct'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.44 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.711 seconds; current allocated memory: 160.975 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.146 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.sched.adb -f 
+Command       db_write returned 0; 0.143 sec.
+INFO: [HLS 200-0] Finish scheduling integer_idct.
+Execute       set_default_model integer_idct 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model integer_idct 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=integer_idct
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.281 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.706 seconds; current allocated memory: 161.596 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.46 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.bind.adb -f 
+Command       db_write returned 0; 0.048 sec.
+INFO: [HLS 200-0] Finish binding integer_idct.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_data'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model write_data 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model write_data 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'write_data'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.097 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.689 seconds; current allocated memory: 161.766 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.016 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.sched.adb -f 
+Command       db_write returned 0; 0.039 sec.
+INFO: [HLS 200-0] Finish scheduling write_data.
+Execute       set_default_model write_data 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model write_data 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=write_data
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.152 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.346 seconds; current allocated memory: 161.875 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.015 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.bind.adb -f 
+Command       db_write returned 0; 0.042 sec.
+INFO: [HLS 200-0] Finish binding write_data.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'add_watermark'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model add_watermark 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model add_watermark 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'add_watermark'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.286 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.473 seconds; current allocated memory: 162.191 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.061 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.sched.adb -f 
+Command       db_write returned 0; 0.111 sec.
+INFO: [HLS 200-0] Finish scheduling add_watermark.
+Execute       set_default_model add_watermark 
+Command       set_default_model returned 0; 0.001 sec.
+Execute       bind -model add_watermark 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=add_watermark
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.641 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.898 seconds; current allocated memory: 162.692 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.646 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.bind.adb -f 
+Command       db_write returned 0; 0.096 sec.
+INFO: [HLS 200-0] Finish binding add_watermark.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'img_proc'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model img_proc 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model img_proc 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Row_Loop'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('indata[2]', dct_hls/dct.cpp:168) on array 'img' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'img'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 18.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.572 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.378 seconds; current allocated memory: 163.297 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.166 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.sched.adb -f 
+Command       db_write returned 0; 0.093 sec.
+INFO: [HLS 200-0] Finish scheduling img_proc.
+Execute       set_default_model img_proc 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model img_proc 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=img_proc
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.485 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.885 seconds; current allocated memory: 163.822 MB.
+Execute       report -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.455 sec.
+Execute       db_write -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.bind.adb -f 
+Command       db_write returned 0; 0.046 sec.
+INFO: [HLS 200-0] Finish binding img_proc.
+Execute       get_model_list img_proc -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess read_data 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess dct_step 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess idct_step 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess integer_idct 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess write_data 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess add_watermark 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess img_proc 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL generation: read_data dct_step idct_step integer_idct write_data add_watermark img_proc
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_data'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model read_data -vendor xilinx -mg_file E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_data'.
+Command       create_rtl_model returned 0; 0.109 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.843 seconds; current allocated memory: 164.732 MB.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       gen_rtl read_data -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_School/dct_hls/solution4/syn/systemc/read_data -synmodules read_data dct_step idct_step integer_idct write_data add_watermark img_proc 
+Command       gen_rtl returned 0; 0.003 sec.
+Execute       gen_rtl read_data -style xilinx -f -lang vhdl -o E:/FPGA_School/dct_hls/solution4/syn/vhdl/read_data 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_rtl read_data -style xilinx -f -lang vlog -o E:/FPGA_School/dct_hls/solution4/syn/verilog/read_data 
+Command       gen_rtl returned 0; 0.001 sec.
+Execute       gen_tb_info read_data -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data -p E:/FPGA_School/dct_hls/solution4/.autopilot/db 
+Command       gen_tb_info returned 0; 0.003 sec.
+Execute       report -model read_data -o E:/FPGA_School/dct_hls/solution4/syn/report/read_data_csynth.rpt -f 
+Command       report returned 0; 0.004 sec.
+Execute       report -model read_data -o E:/FPGA_School/dct_hls/solution4/syn/report/read_data_csynth.xml -f -x 
+Command       report returned 0; 0.003 sec.
+Execute       report -model read_data -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.verbose.rpt -verbose -f 
+Command       report returned 0; 0.012 sec.
+Execute       db_write -model read_data -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.adb -f 
+Command       db_write returned 0; 0.042 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dct_step'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model dct_step -vendor xilinx -mg_file E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dct_step'.
+Command       create_rtl_model returned 0; 0.087 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.291 seconds; current allocated memory: 165.884 MB.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       gen_rtl dct_step -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_School/dct_hls/solution4/syn/systemc/dct_step -synmodules read_data dct_step idct_step integer_idct write_data add_watermark img_proc 
+Command       gen_rtl returned 0; 0.004 sec.
+Execute       gen_rtl dct_step -style xilinx -f -lang vhdl -o E:/FPGA_School/dct_hls/solution4/syn/vhdl/dct_step 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_rtl dct_step -style xilinx -f -lang vlog -o E:/FPGA_School/dct_hls/solution4/syn/verilog/dct_step 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_tb_info dct_step -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step -p E:/FPGA_School/dct_hls/solution4/.autopilot/db 
+Command       gen_tb_info returned 0; 0.025 sec.
+Execute       report -model dct_step -o E:/FPGA_School/dct_hls/solution4/syn/report/dct_step_csynth.rpt -f 
+Command       report returned 0; 0.033 sec.
+Execute       report -model dct_step -o E:/FPGA_School/dct_hls/solution4/syn/report/dct_step_csynth.xml -f -x 
+Command       report returned 0; 0.043 sec.
+Execute       report -model dct_step -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.verbose.rpt -verbose -f 
+Command       report returned 0; 0.173 sec.
+Execute       db_write -model dct_step -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.adb -f 
+Command       db_write returned 0; 0.168 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'idct_step'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model idct_step -vendor xilinx -mg_file E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'idct_step'.
+Command       create_rtl_model returned 0; 0.159 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.909 seconds; current allocated memory: 167.106 MB.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       gen_rtl idct_step -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_School/dct_hls/solution4/syn/systemc/idct_step -synmodules read_data dct_step idct_step integer_idct write_data add_watermark img_proc 
+Command       gen_rtl returned 0; 0.004 sec.
+Execute       gen_rtl idct_step -style xilinx -f -lang vhdl -o E:/FPGA_School/dct_hls/solution4/syn/vhdl/idct_step 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_rtl idct_step -style xilinx -f -lang vlog -o E:/FPGA_School/dct_hls/solution4/syn/verilog/idct_step 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_tb_info idct_step -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step -p E:/FPGA_School/dct_hls/solution4/.autopilot/db 
+Command       gen_tb_info returned 0; 0.019 sec.
+Execute       report -model idct_step -o E:/FPGA_School/dct_hls/solution4/syn/report/idct_step_csynth.rpt -f 
+Command       report returned 0; 0.02 sec.
+Execute       report -model idct_step -o E:/FPGA_School/dct_hls/solution4/syn/report/idct_step_csynth.xml -f -x 
+Command       report returned 0; 0.015 sec.
+Execute       report -model idct_step -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.verbose.rpt -verbose -f 
+Command       report returned 0; 0.113 sec.
+Execute       db_write -model idct_step -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.adb -f 
+Command       db_write returned 0; 0.182 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'integer_idct'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model integer_idct -vendor xilinx -mg_file E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'integer_idct'.
+Command       create_rtl_model returned 0; 0.225 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.868 seconds; current allocated memory: 169.751 MB.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       gen_rtl integer_idct -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_School/dct_hls/solution4/syn/systemc/integer_idct -synmodules read_data dct_step idct_step integer_idct write_data add_watermark img_proc 
+Command       gen_rtl returned 0; 0.013 sec.
+Execute       gen_rtl integer_idct -style xilinx -f -lang vhdl -o E:/FPGA_School/dct_hls/solution4/syn/vhdl/integer_idct 
+Command       gen_rtl returned 0; 0.008 sec.
+Execute       gen_rtl integer_idct -style xilinx -f -lang vlog -o E:/FPGA_School/dct_hls/solution4/syn/verilog/integer_idct 
+Command       gen_rtl returned 0; 0.007 sec.
+Execute       gen_tb_info integer_idct -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct -p E:/FPGA_School/dct_hls/solution4/.autopilot/db 
+Command       gen_tb_info returned 0; 0.075 sec.
+Execute       report -model integer_idct -o E:/FPGA_School/dct_hls/solution4/syn/report/integer_idct_csynth.rpt -f 
+Command       report returned 0; 0.092 sec.
+Execute       report -model integer_idct -o E:/FPGA_School/dct_hls/solution4/syn/report/integer_idct_csynth.xml -f -x 
+Command       report returned 0; 0.076 sec.
+Execute       report -model integer_idct -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.verbose.rpt -verbose -f 
+Command       report returned 0; 0.459 sec.
+Execute       db_write -model integer_idct -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.adb -f 
+Command       db_write returned 0; 0.235 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_data'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model write_data -vendor xilinx -mg_file E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_data'.
+Command       create_rtl_model returned 0; 0.088 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.382 seconds; current allocated memory: 170.793 MB.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       gen_rtl write_data -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_School/dct_hls/solution4/syn/systemc/write_data -synmodules read_data dct_step idct_step integer_idct write_data add_watermark img_proc 
+Command       gen_rtl returned 0; 0.004 sec.
+Execute       gen_rtl write_data -style xilinx -f -lang vhdl -o E:/FPGA_School/dct_hls/solution4/syn/vhdl/write_data 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_rtl write_data -style xilinx -f -lang vlog -o E:/FPGA_School/dct_hls/solution4/syn/verilog/write_data 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_tb_info write_data -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data -p E:/FPGA_School/dct_hls/solution4/.autopilot/db 
+Command       gen_tb_info returned 0; 0.006 sec.
+Execute       report -model write_data -o E:/FPGA_School/dct_hls/solution4/syn/report/write_data_csynth.rpt -f 
+Command       report returned 0; 0.006 sec.
+Execute       report -model write_data -o E:/FPGA_School/dct_hls/solution4/syn/report/write_data_csynth.xml -f -x 
+Command       report returned 0; 0.004 sec.
+Execute       report -model write_data -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.verbose.rpt -verbose -f 
+Command       report returned 0; 0.013 sec.
+Execute       db_write -model write_data -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.adb -f 
+Command       db_write returned 0; 0.099 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'add_watermark'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model add_watermark -vendor xilinx -mg_file E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'img_proc_mul_mul_16s_6ns_20_1_1' to 'img_proc_mul_mul_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'img_proc_mul_mul_bkb': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'add_watermark'.
+Command       create_rtl_model returned 0; 0.353 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.696 seconds; current allocated memory: 173.085 MB.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       gen_rtl add_watermark -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_School/dct_hls/solution4/syn/systemc/add_watermark -synmodules read_data dct_step idct_step integer_idct write_data add_watermark img_proc 
+Command       gen_rtl returned 0; 0.005 sec.
+Execute       gen_rtl add_watermark -style xilinx -f -lang vhdl -o E:/FPGA_School/dct_hls/solution4/syn/vhdl/add_watermark 
+Command       gen_rtl returned 0; 0.004 sec.
+Execute       gen_rtl add_watermark -style xilinx -f -lang vlog -o E:/FPGA_School/dct_hls/solution4/syn/verilog/add_watermark 
+Command       gen_rtl returned 0; 0.005 sec.
+Execute       gen_tb_info add_watermark -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark -p E:/FPGA_School/dct_hls/solution4/.autopilot/db 
+Command       gen_tb_info returned 0; 0.04 sec.
+Execute       report -model add_watermark -o E:/FPGA_School/dct_hls/solution4/syn/report/add_watermark_csynth.rpt -f 
+Command       report returned 0; 0.035 sec.
+Execute       report -model add_watermark -o E:/FPGA_School/dct_hls/solution4/syn/report/add_watermark_csynth.xml -f -x 
+Command       report returned 0; 0.02 sec.
+Execute       report -model add_watermark -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.verbose.rpt -verbose -f 
+Command       report returned 0; 0.457 sec.
+Execute       db_write -model add_watermark -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.adb -f 
+Command       db_write returned 0; 0.101 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'img_proc'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model img_proc -vendor xilinx -mg_file E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'img_proc/img' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'img_proc/mark' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'img_proc/out_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'img_proc' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'img_proc'.
+Command       create_rtl_model returned 0; 0.278 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.284 seconds; current allocated memory: 174.601 MB.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       gen_rtl img_proc -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o E:/FPGA_School/dct_hls/solution4/syn/systemc/img_proc -synmodules read_data dct_step idct_step integer_idct write_data add_watermark img_proc 
+Command       gen_rtl returned 0; 0.014 sec.
+Execute       gen_rtl img_proc -istop -style xilinx -f -lang vhdl -o E:/FPGA_School/dct_hls/solution4/syn/vhdl/img_proc 
+Command       gen_rtl returned 0; 0.07 sec.
+Execute       gen_rtl img_proc -istop -style xilinx -f -lang vlog -o E:/FPGA_School/dct_hls/solution4/syn/verilog/img_proc 
+Command       gen_rtl returned 0; 0.054 sec.
+Execute       export_constraint_db -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.constraint.tcl -f -tool general 
+Command       export_constraint_db returned 0; 0.001 sec.
+Execute       report -model img_proc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.design.xml -verbose -f -dv 
+Command       report returned 0; 0.323 sec.
+Execute       report -model img_proc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.sdaccel.xml -verbose -f -sdaccel 
+Command       report returned 0; 0.119 sec.
+Execute       gen_tb_info img_proc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc -p E:/FPGA_School/dct_hls/solution4/.autopilot/db 
+Command       gen_tb_info returned 0; 0.004 sec.
+Execute       report -model img_proc -o E:/FPGA_School/dct_hls/solution4/syn/report/img_proc_csynth.rpt -f 
+Command       report returned 0; 0.022 sec.
+Execute       report -model img_proc -o E:/FPGA_School/dct_hls/solution4/syn/report/img_proc_csynth.xml -f -x 
+Command       report returned 0; 0.014 sec.
+Execute       report -model img_proc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.verbose.rpt -verbose -f 
+Command       report returned 0; 0.667 sec.
+Execute       db_write -model img_proc -o E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.adb -f 
+Command       db_write returned 0; 0.13 sec.
+Execute       sc_get_clocks img_proc 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       sc_get_portdomain img_proc 
+Command       sc_get_portdomain returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL component generation: read_data dct_step idct_step integer_idct write_data add_watermark img_proc
+INFO: [HLS 200-0] Handling components in module [read_data] ... 
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.compgen.tcl 
+Command       ap_source returned 0; 0.026 sec.
+INFO: [HLS 200-0] Handling components in module [dct_step] ... 
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.compgen.tcl 
+Command       ap_source returned 0; 0.03 sec.
+INFO: [HLS 200-0] Handling components in module [idct_step] ... 
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.compgen.tcl 
+Command       ap_source returned 0; 0.025 sec.
+INFO: [HLS 200-0] Handling components in module [integer_idct] ... 
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.compgen.tcl 
+Command       ap_source returned 0; 0.029 sec.
+INFO: [HLS 200-0] Handling components in module [write_data] ... 
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.compgen.tcl 
+Command       ap_source returned 0; 0.024 sec.
+INFO: [HLS 200-0] Handling components in module [add_watermark] ... 
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.compgen.tcl 
+INFO: [HLS 200-0] Found component img_proc_mul_mul_bkb.
+INFO: [HLS 200-0] Append model img_proc_mul_mul_bkb
+Command       ap_source returned 0; 0.03 sec.
+INFO: [HLS 200-0] Handling components in module [img_proc] ... 
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.compgen.tcl 
+Command       ap_source returned 0; 0.03 sec.
+INFO: [HLS 200-0] Append model read_data
+INFO: [HLS 200-0] Append model dct_step
+INFO: [HLS 200-0] Append model idct_step
+INFO: [HLS 200-0] Append model integer_idct
+INFO: [HLS 200-0] Append model write_data
+INFO: [HLS 200-0] Append model add_watermark
+INFO: [HLS 200-0] Append model img_proc
+INFO: [HLS 200-0] Generating RTL model list ...
+INFO: [HLS 200-0] All models in this session: img_proc_mul_mul_bkb read_data dct_step idct_step integer_idct write_data add_watermark img_proc
+INFO: [HLS 200-0] To file: write model img_proc_mul_mul_bkb
+INFO: [HLS 200-0] To file: write model read_data
+INFO: [HLS 200-0] To file: write model dct_step
+INFO: [HLS 200-0] To file: write model idct_step
+INFO: [HLS 200-0] To file: write model integer_idct
+INFO: [HLS 200-0] To file: write model write_data
+INFO: [HLS 200-0] To file: write model add_watermark
+INFO: [HLS 200-0] To file: write model img_proc
+INFO: [HLS 200-0] Finished generating RTL model list.
+
+
+INFO: [HLS 200-0] RTL Generation done.
+INFO: [HLS 200-0] CAS Generation done.
+INFO: [HLS 200-0] CBC Generation done.
+Execute       export_ssdm E:/FPGA_School/dct_hls/solution4/.autopilot/db/a.export.ll 
+Command       export_ssdm returned 0; 0.006 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0.002 sec.
+Command       ap_source returned 0; 0.005 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0.004 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0.005 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0.007 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0.015 sec.
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.029 sec.
+Command             ap_source returned 0; 0.044 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.041 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.017 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0.007 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.213 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0.003 sec.
+Command           ap_source returned 0; 0.346 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.357 sec.
+Command       ap_source returned 0; 0.357 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0.008 sec.
+Command       ap_source returned 0; 0.009 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.compgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.compgen.tcl 
+Command       ap_source returned 0; 0.072 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0.004 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0.004 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0.003 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0.008 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0.009 sec.
+Execute               source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.016 sec.
+Command             ap_source returned 0; 0.025 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.026 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.023 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0.012 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.286 sec.
+Execute             source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0.002 sec.
+Command           ap_source returned 0; 0.393 sec.
+Execute           source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.4 sec.
+Command       ap_source returned 0; 0.401 sec.
+Execute       source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source C:/Xilinx/Vivado/2017.4/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0.004 sec.
+Command       ap_source returned 0; 0.005 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.compgen.tcl 
+Execute         source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.tbgen.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.tbgen.tcl 
+Command         ap_source returned 0; 0.001 sec.
+Execute         source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.tbgen.tcl 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.029 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.039 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/read_data.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/dct_step.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/idct_step.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/integer_idct.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/write_data.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/add_watermark.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.constraint.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.tbgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/img_proc.constraint.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       sc_get_clocks img_proc 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       source E:/FPGA_School/dct_hls/solution4/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:19 ; elapsed = 00:00:48 . Memory (MB): peak = 238.820 ; gain = 183.488
+INFO: [SYSC 207-301] Generating SystemC RTL for img_proc.
+INFO: [VHDL 208-304] Generating VHDL RTL for img_proc.
+INFO: [VLOG 209-307] Generating Verilog RTL for img_proc.
+Command     autosyn returned 0; 19.603 sec.
+Command   csynth_design returned 0; 46.505 sec.
+Command ap_source returned 0; 47.424 sec.
+Execute cleanup_all 
+Command cleanup_all returned 0; 0.044 sec.

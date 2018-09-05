@@ -1,0 +1,263 @@
+
+
+================================================================
+== Vivado HLS Report for 'read_data'
+================================================================
+* Date:           Tue Jul 17 22:00:42 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution2
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      0.59|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    8|    8|    8|    8| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 8, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 1
+  Pipeline-0 : II = 8, D = 9, States = { 1 2 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+
+* FSM state operations: 
+
+ <State 1> : 0.59ns
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%input_addr = getelementptr [16 x i8]* %input_r, i64 0, i64 0" [dct_hls/dct.cpp:102]
+ST_1 : Operation 11 [2/2] (0.59ns)   --->   "%input_load = load i8* %input_addr, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%input_addr_1 = getelementptr [16 x i8]* %input_r, i64 0, i64 1" [dct_hls/dct.cpp:102]
+ST_1 : Operation 13 [2/2] (0.59ns)   --->   "%input_load_1 = load i8* %input_addr_1, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 2> : 0.59ns
+ST_2 : Operation 14 [1/2] (0.59ns)   --->   "%input_load = load i8* %input_addr, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 15 [1/2] (0.59ns)   --->   "%input_load_1 = load i8* %input_addr_1, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%input_addr_2 = getelementptr [16 x i8]* %input_r, i64 0, i64 2" [dct_hls/dct.cpp:102]
+ST_2 : Operation 17 [2/2] (0.59ns)   --->   "%input_load_2 = load i8* %input_addr_2, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%input_addr_3 = getelementptr [16 x i8]* %input_r, i64 0, i64 3" [dct_hls/dct.cpp:102]
+ST_2 : Operation 19 [2/2] (0.59ns)   --->   "%input_load_3 = load i8* %input_addr_3, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 3> : 0.59ns
+ST_3 : Operation 20 [1/2] (0.59ns)   --->   "%input_load_2 = load i8* %input_addr_2, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 21 [1/2] (0.59ns)   --->   "%input_load_3 = load i8* %input_addr_3, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%input_addr_4 = getelementptr [16 x i8]* %input_r, i64 0, i64 4" [dct_hls/dct.cpp:102]
+ST_3 : Operation 23 [2/2] (0.59ns)   --->   "%input_load_4 = load i8* %input_addr_4, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%input_addr_5 = getelementptr [16 x i8]* %input_r, i64 0, i64 5" [dct_hls/dct.cpp:102]
+ST_3 : Operation 25 [2/2] (0.59ns)   --->   "%input_load_5 = load i8* %input_addr_5, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 4> : 0.59ns
+ST_4 : Operation 26 [1/2] (0.59ns)   --->   "%input_load_4 = load i8* %input_addr_4, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 27 [1/2] (0.59ns)   --->   "%input_load_5 = load i8* %input_addr_5, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%input_addr_6 = getelementptr [16 x i8]* %input_r, i64 0, i64 6" [dct_hls/dct.cpp:102]
+ST_4 : Operation 29 [2/2] (0.59ns)   --->   "%input_load_6 = load i8* %input_addr_6, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%input_addr_7 = getelementptr [16 x i8]* %input_r, i64 0, i64 7" [dct_hls/dct.cpp:102]
+ST_4 : Operation 31 [2/2] (0.59ns)   --->   "%input_load_7 = load i8* %input_addr_7, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 5> : 0.59ns
+ST_5 : Operation 32 [1/2] (0.59ns)   --->   "%input_load_6 = load i8* %input_addr_6, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 33 [1/2] (0.59ns)   --->   "%input_load_7 = load i8* %input_addr_7, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%input_addr_8 = getelementptr [16 x i8]* %input_r, i64 0, i64 8" [dct_hls/dct.cpp:102]
+ST_5 : Operation 35 [2/2] (0.59ns)   --->   "%input_load_8 = load i8* %input_addr_8, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%input_addr_9 = getelementptr [16 x i8]* %input_r, i64 0, i64 9" [dct_hls/dct.cpp:102]
+ST_5 : Operation 37 [2/2] (0.59ns)   --->   "%input_load_9 = load i8* %input_addr_9, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 6> : 0.59ns
+ST_6 : Operation 38 [1/2] (0.59ns)   --->   "%input_load_8 = load i8* %input_addr_8, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 39 [1/2] (0.59ns)   --->   "%input_load_9 = load i8* %input_addr_9, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%input_addr_10 = getelementptr [16 x i8]* %input_r, i64 0, i64 10" [dct_hls/dct.cpp:102]
+ST_6 : Operation 41 [2/2] (0.59ns)   --->   "%input_load_10 = load i8* %input_addr_10, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%input_addr_11 = getelementptr [16 x i8]* %input_r, i64 0, i64 11" [dct_hls/dct.cpp:102]
+ST_6 : Operation 43 [2/2] (0.59ns)   --->   "%input_load_11 = load i8* %input_addr_11, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 7> : 0.59ns
+ST_7 : Operation 44 [1/2] (0.59ns)   --->   "%input_load_10 = load i8* %input_addr_10, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 45 [1/2] (0.59ns)   --->   "%input_load_11 = load i8* %input_addr_11, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%input_addr_12 = getelementptr [16 x i8]* %input_r, i64 0, i64 12" [dct_hls/dct.cpp:102]
+ST_7 : Operation 47 [2/2] (0.59ns)   --->   "%input_load_12 = load i8* %input_addr_12, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%input_addr_13 = getelementptr [16 x i8]* %input_r, i64 0, i64 13" [dct_hls/dct.cpp:102]
+ST_7 : Operation 49 [2/2] (0.59ns)   --->   "%input_load_13 = load i8* %input_addr_13, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 8> : 0.59ns
+ST_8 : Operation 50 [1/2] (0.59ns)   --->   "%input_load_12 = load i8* %input_addr_12, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 51 [1/2] (0.59ns)   --->   "%input_load_13 = load i8* %input_addr_13, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 52 [1/1] (0.00ns)   --->   "%input_addr_14 = getelementptr [16 x i8]* %input_r, i64 0, i64 14" [dct_hls/dct.cpp:102]
+ST_8 : Operation 53 [2/2] (0.59ns)   --->   "%input_load_14 = load i8* %input_addr_14, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 54 [1/1] (0.00ns)   --->   "%input_addr_15 = getelementptr [16 x i8]* %input_r, i64 0, i64 15" [dct_hls/dct.cpp:102]
+ST_8 : Operation 55 [2/2] (0.59ns)   --->   "%input_load_15 = load i8* %input_addr_15, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 9> : 0.59ns
+ST_9 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [dct_hls/dct.cpp:96]
+ST_9 : Operation 57 [1/1] (0.00ns)   --->   "%buf_0_0_write_assi = zext i8 %input_load to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 58 [1/1] (0.00ns)   --->   "%buf_0_1_write_assi = zext i8 %input_load_1 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 59 [1/1] (0.00ns)   --->   "%buf_0_2_write_assi = zext i8 %input_load_2 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 60 [1/1] (0.00ns)   --->   "%buf_0_3_write_assi = zext i8 %input_load_3 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 61 [1/1] (0.00ns)   --->   "%buf_1_0_write_assi = zext i8 %input_load_4 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 62 [1/1] (0.00ns)   --->   "%buf_1_1_write_assi = zext i8 %input_load_5 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 63 [1/1] (0.00ns)   --->   "%buf_1_2_write_assi = zext i8 %input_load_6 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 64 [1/1] (0.00ns)   --->   "%buf_1_3_write_assi = zext i8 %input_load_7 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 65 [1/1] (0.00ns)   --->   "%buf_2_0_write_assi = zext i8 %input_load_8 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 66 [1/1] (0.00ns)   --->   "%buf_2_1_write_assi = zext i8 %input_load_9 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 67 [1/1] (0.00ns)   --->   "%buf_2_2_write_assi = zext i8 %input_load_10 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 68 [1/1] (0.00ns)   --->   "%buf_2_3_write_assi = zext i8 %input_load_11 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 69 [1/1] (0.00ns)   --->   "%buf_3_0_write_assi = zext i8 %input_load_12 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 70 [1/1] (0.00ns)   --->   "%buf_3_1_write_assi = zext i8 %input_load_13 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 71 [1/2] (0.59ns)   --->   "%input_load_14 = load i8* %input_addr_14, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 72 [1/1] (0.00ns)   --->   "%buf_3_2_write_assi = zext i8 %input_load_14 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 73 [1/2] (0.59ns)   --->   "%input_load_15 = load i8* %input_addr_15, align 1" [dct_hls/dct.cpp:102]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 74 [1/1] (0.00ns)   --->   "%buf_3_3_write_assi = zext i8 %input_load_15 to i16" [dct_hls/dct.cpp:102]
+ST_9 : Operation 75 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } undef, i16 %buf_0_0_write_assi, 0" [dct_hls/dct.cpp:104]
+ST_9 : Operation 76 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv, i16 %buf_0_1_write_assi, 1" [dct_hls/dct.cpp:104]
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_1, i16 %buf_0_2_write_assi, 2" [dct_hls/dct.cpp:104]
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_2, i16 %buf_0_3_write_assi, 3" [dct_hls/dct.cpp:104]
+ST_9 : Operation 79 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_3, i16 %buf_1_0_write_assi, 4" [dct_hls/dct.cpp:104]
+ST_9 : Operation 80 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_4, i16 %buf_1_1_write_assi, 5" [dct_hls/dct.cpp:104]
+ST_9 : Operation 81 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_5, i16 %buf_1_2_write_assi, 6" [dct_hls/dct.cpp:104]
+ST_9 : Operation 82 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_6, i16 %buf_1_3_write_assi, 7" [dct_hls/dct.cpp:104]
+ST_9 : Operation 83 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_7, i16 %buf_2_0_write_assi, 8" [dct_hls/dct.cpp:104]
+ST_9 : Operation 84 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_8, i16 %buf_2_1_write_assi, 9" [dct_hls/dct.cpp:104]
+ST_9 : Operation 85 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_9, i16 %buf_2_2_write_assi, 10" [dct_hls/dct.cpp:104]
+ST_9 : Operation 86 [1/1] (0.00ns)   --->   "%mrv_10 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_s, i16 %buf_2_3_write_assi, 11" [dct_hls/dct.cpp:104]
+ST_9 : Operation 87 [1/1] (0.00ns)   --->   "%mrv_11 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_10, i16 %buf_3_0_write_assi, 12" [dct_hls/dct.cpp:104]
+ST_9 : Operation 88 [1/1] (0.00ns)   --->   "%mrv_12 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_11, i16 %buf_3_1_write_assi, 13" [dct_hls/dct.cpp:104]
+ST_9 : Operation 89 [1/1] (0.00ns)   --->   "%mrv_13 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_12, i16 %buf_3_2_write_assi, 14" [dct_hls/dct.cpp:104]
+ST_9 : Operation 90 [1/1] (0.00ns)   --->   "%mrv_14 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_13, i16 %buf_3_3_write_assi, 15" [dct_hls/dct.cpp:104]
+ST_9 : Operation 91 [1/1] (0.00ns)   --->   "ret { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_14" [dct_hls/dct.cpp:104]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('input_addr', dct_hls/dct.cpp:102) [3]  (0 ns)
+	'load' operation ('input_load', dct_hls/dct.cpp:102) on array 'input_r' [4]  (0.594 ns)
+
+ <State 2>: 0.594ns
+The critical path consists of the following:
+	'load' operation ('input_load', dct_hls/dct.cpp:102) on array 'input_r' [4]  (0.594 ns)
+
+ <State 3>: 0.594ns
+The critical path consists of the following:
+	'load' operation ('input_load_2', dct_hls/dct.cpp:102) on array 'input_r' [10]  (0.594 ns)
+
+ <State 4>: 0.594ns
+The critical path consists of the following:
+	'load' operation ('input_load_4', dct_hls/dct.cpp:102) on array 'input_r' [16]  (0.594 ns)
+
+ <State 5>: 0.594ns
+The critical path consists of the following:
+	'load' operation ('input_load_6', dct_hls/dct.cpp:102) on array 'input_r' [22]  (0.594 ns)
+
+ <State 6>: 0.594ns
+The critical path consists of the following:
+	'load' operation ('input_load_8', dct_hls/dct.cpp:102) on array 'input_r' [28]  (0.594 ns)
+
+ <State 7>: 0.594ns
+The critical path consists of the following:
+	'load' operation ('input_load_10', dct_hls/dct.cpp:102) on array 'input_r' [34]  (0.594 ns)
+
+ <State 8>: 0.594ns
+The critical path consists of the following:
+	'load' operation ('input_load_12', dct_hls/dct.cpp:102) on array 'input_r' [40]  (0.594 ns)
+
+ <State 9>: 0.594ns
+The critical path consists of the following:
+	'load' operation ('input_load_14', dct_hls/dct.cpp:102) on array 'input_r' [46]  (0.594 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

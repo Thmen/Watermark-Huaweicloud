@@ -1,0 +1,158 @@
+
+
+================================================================
+== Vivado HLS Report for 'write_data'
+================================================================
+* Date:           Tue Jul 17 14:58:50 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      0.59|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    7|    7|    8|    8| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+---------+---------+-----+
+|       Name      | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++-----------------+---------+-------+---------+---------+-----+
+|DSP              |        -|      -|        -|        -|    -|
+|Expression       |        -|      -|        -|        -|    -|
+|FIFO             |        -|      -|        -|        -|    -|
+|Instance         |        -|      -|        -|        -|    -|
+|Memory           |        -|      -|        -|        -|    -|
+|Multiplexer      |        -|      -|        -|      220|    -|
+|Register         |        -|      -|      232|        -|    -|
++-----------------+---------+-------+---------+---------+-----+
+|Total            |        0|      0|      232|      220|    0|
++-----------------+---------+-------+---------+---------+-----+
+|Available        |     4320|   6840|  2364480|  1182240|  960|
++-----------------+---------+-------+---------+---------+-----+
+|Utilization (%)  |        0|      0|    ~0   |    ~0   |    0|
++-----------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-------------------+----+-----------+-----+-----------+
+    |        Name       | LUT| Input Size| Bits| Total Bits|
+    +-------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm          |  44|          9|    1|          9|
+    |output_r_address0  |  44|          9|    4|         36|
+    |output_r_address1  |  44|          9|    4|         36|
+    |output_r_d0        |  44|          9|   16|        144|
+    |output_r_d1        |  44|          9|   16|        144|
+    +-------------------+----+-----------+-----+-----------+
+    |Total              | 220|         45|   41|        369|
+    +-------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------+----+----+-----+-----------+
+    |         Name         | FF | LUT| Bits| Const Bits|
+    +----------------------+----+----+-----+-----------+
+    |ap_CS_fsm             |   8|   0|    8|          0|
+    |ap_port_reg_p_read10  |  16|   0|   16|          0|
+    |ap_port_reg_p_read11  |  16|   0|   16|          0|
+    |ap_port_reg_p_read12  |  16|   0|   16|          0|
+    |ap_port_reg_p_read13  |  16|   0|   16|          0|
+    |ap_port_reg_p_read14  |  16|   0|   16|          0|
+    |ap_port_reg_p_read15  |  16|   0|   16|          0|
+    |ap_port_reg_p_read2   |  16|   0|   16|          0|
+    |ap_port_reg_p_read3   |  16|   0|   16|          0|
+    |ap_port_reg_p_read4   |  16|   0|   16|          0|
+    |ap_port_reg_p_read5   |  16|   0|   16|          0|
+    |ap_port_reg_p_read6   |  16|   0|   16|          0|
+    |ap_port_reg_p_read7   |  16|   0|   16|          0|
+    |ap_port_reg_p_read8   |  16|   0|   16|          0|
+    |ap_port_reg_p_read9   |  16|   0|   16|          0|
+    +----------------------+----+----+-----+-----------+
+    |Total                 | 232|   0|  232|          0|
+    +----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs |  write_data  | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |  write_data  | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |  write_data  | return value |
+|ap_done            | out |    1| ap_ctrl_hs |  write_data  | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |  write_data  | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |  write_data  | return value |
+|p_read             |  in |   16|   ap_none  |    p_read    |    scalar    |
+|p_read1            |  in |   16|   ap_none  |    p_read1   |    scalar    |
+|p_read2            |  in |   16|   ap_none  |    p_read2   |    scalar    |
+|p_read3            |  in |   16|   ap_none  |    p_read3   |    scalar    |
+|p_read4            |  in |   16|   ap_none  |    p_read4   |    scalar    |
+|p_read5            |  in |   16|   ap_none  |    p_read5   |    scalar    |
+|p_read6            |  in |   16|   ap_none  |    p_read6   |    scalar    |
+|p_read7            |  in |   16|   ap_none  |    p_read7   |    scalar    |
+|p_read8            |  in |   16|   ap_none  |    p_read8   |    scalar    |
+|p_read9            |  in |   16|   ap_none  |    p_read9   |    scalar    |
+|p_read10           |  in |   16|   ap_none  |   p_read10   |    scalar    |
+|p_read11           |  in |   16|   ap_none  |   p_read11   |    scalar    |
+|p_read12           |  in |   16|   ap_none  |   p_read12   |    scalar    |
+|p_read13           |  in |   16|   ap_none  |   p_read13   |    scalar    |
+|p_read14           |  in |   16|   ap_none  |   p_read14   |    scalar    |
+|p_read15           |  in |   16|   ap_none  |   p_read15   |    scalar    |
+|output_r_address0  | out |    4|  ap_memory |   output_r   |     array    |
+|output_r_ce0       | out |    1|  ap_memory |   output_r   |     array    |
+|output_r_we0       | out |    1|  ap_memory |   output_r   |     array    |
+|output_r_d0        | out |   16|  ap_memory |   output_r   |     array    |
+|output_r_address1  | out |    4|  ap_memory |   output_r   |     array    |
+|output_r_ce1       | out |    1|  ap_memory |   output_r   |     array    |
+|output_r_we1       | out |    1|  ap_memory |   output_r   |     array    |
+|output_r_d1        | out |   16|  ap_memory |   output_r   |     array    |
++-------------------+-----+-----+------------+--------------+--------------+
+

@@ -1,0 +1,203 @@
+
+
+================================================================
+== Vivado HLS Report for 'add_watermark'
+================================================================
+* Date:           Fri Jul 20 11:59:20 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution4
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.64|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------+--------------+-----+-----+-----+-----+----------+
+        |                               |              |  Latency  |  Interval | Pipeline |
+        |            Instance           |    Module    | min | max | min | max |   Type   |
+        +-------------------------------+--------------+-----+-----+-----+-----+----------+
+        |call_ret5_integer_idct_fu_160  |integer_idct  |    0|    0|    1|    1| function |
+        |call_ret2_i_dct_step_fu_180    |dct_step      |    0|    0|    1|    1| function |
+        |call_ret_i_dct_step_fu_200     |dct_step      |    0|    0|    1|    1| function |
+        |call_ret3_read_data_fu_220     |read_data     |    0|    0|    1|    1| function |
+        |call_ret_write_data_fu_256     |write_data    |    0|    0|    1|    1| function |
+        +-------------------------------+--------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+---------+---------+-----+
+|       Name      | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++-----------------+---------+-------+---------+---------+-----+
+|DSP              |        -|      4|        -|        -|    -|
+|Expression       |        -|      -|        0|      415|    -|
+|FIFO             |        -|      -|        -|        -|    -|
+|Instance         |        -|      -|        0|     5952|    -|
+|Memory           |        -|      -|        -|        -|    -|
+|Multiplexer      |        -|      -|        -|        -|    -|
+|Register         |        -|      -|      257|        -|    -|
++-----------------+---------+-------+---------+---------+-----+
+|Total            |        0|      4|      257|     6367|    0|
++-----------------+---------+-------+---------+---------+-----+
+|Available        |     4320|   6840|  2364480|  1182240|  960|
++-----------------+---------+-------+---------+---------+-----+
+|Utilization (%)  |        0|   ~0  |    ~0   |    ~0   |    0|
++-----------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------+--------------+---------+-------+---+------+
+    |            Instance           |    Module    | BRAM_18K| DSP48E| FF|  LUT |
+    +-------------------------------+--------------+---------+-------+---+------+
+    |call_ret2_i_dct_step_fu_180    |dct_step      |        0|      0|  0|   976|
+    |call_ret_i_dct_step_fu_200     |dct_step      |        0|      0|  0|   976|
+    |call_ret5_integer_idct_fu_160  |integer_idct  |        0|      0|  0|  4000|
+    |call_ret3_read_data_fu_220     |read_data     |        0|      0|  0|     0|
+    |call_ret_write_data_fu_256     |write_data    |        0|      0|  0|     0|
+    +-------------------------------+--------------+---------+-------+---+------+
+    |Total                          |              |        0|      0|  0|  5952|
+    +-------------------------------+--------------+---------+-------+---+------+
+
+    * DSP48: 
+    +--------------------------+----------------------+-----------+
+    |         Instance         |        Module        | Expression|
+    +--------------------------+----------------------+-----------+
+    |img_proc_mul_mul_bkb_U81  |img_proc_mul_mul_bkb  |  i0 * i1  |
+    |img_proc_mul_mul_bkb_U82  |img_proc_mul_mul_bkb  |  i0 * i1  |
+    |img_proc_mul_mul_bkb_U83  |img_proc_mul_mul_bkb  |  i0 * i1  |
+    |img_proc_mul_mul_bkb_U84  |img_proc_mul_mul_bkb  |  i0 * i1  |
+    +--------------------------+----------------------+-----------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------------------+----------+-------+---+----+------------+------------+
+    |                 Variable Name                | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------------------+----------+-------+---+----+------------+------------+
+    |buf_temp_qft_0_3_V_1_fu_754_p2                |     +    |      0|  0|  27|          20|           4|
+    |buf_temp_qft_0_3_V_fu_545_p2                  |     +    |      0|  0|  27|          20|          20|
+    |buf_temp_qft_1_2_V_1_fu_766_p2                |     +    |      0|  0|  27|          20|           4|
+    |buf_temp_qft_1_2_V_fu_607_p2                  |     +    |      0|  0|  27|          20|          20|
+    |buf_temp_qft_2_1_V_1_fu_760_p2                |     +    |      0|  0|  27|          20|           4|
+    |buf_temp_qft_2_1_V_fu_646_p2                  |     +    |      0|  0|  27|          20|          20|
+    |buf_temp_qft_3_0_V_1_fu_772_p2                |     +    |      0|  0|  27|          20|           4|
+    |buf_temp_qft_3_0_V_fu_703_p2                  |     +    |      0|  0|  27|          20|          20|
+    |call_ret5_integer_idct_fu_160_src_0_1_V_read  |     +    |      0|  0|  27|          20|          20|
+    |call_ret5_integer_idct_fu_160_src_1_0_V_read  |     +    |      0|  0|  27|          20|          20|
+    |call_ret5_integer_idct_fu_160_src_2_3_V_read  |     +    |      0|  0|  27|          20|          20|
+    |call_ret5_integer_idct_fu_160_src_3_2_V_read  |     +    |      0|  0|  27|          20|          20|
+    |tmp_fu_420_p2                                 |   icmp   |      0|  0|  11|           8|           1|
+    |call_ret5_integer_idct_fu_160_src_0_3_V_read  |  select  |      0|  0|  20|           1|          20|
+    |call_ret5_integer_idct_fu_160_src_1_2_V_read  |  select  |      0|  0|  20|           1|          20|
+    |call_ret5_integer_idct_fu_160_src_2_1_V_read  |  select  |      0|  0|  20|           1|          20|
+    |call_ret5_integer_idct_fu_160_src_3_0_V_read  |  select  |      0|  0|  20|           1|          20|
+    +----------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                         |          |      0|  0| 415|         252|         257|
+    +----------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +------------------+----+----+-----+-----------+
+    |       Name       | FF | LUT| Bits| Const Bits|
+    +------------------+----+----+-----+-----------+
+    |temp_0_0_reg_918  |  16|   0|   16|          0|
+    |temp_0_1_reg_923  |  16|   0|   16|          0|
+    |temp_0_2_reg_928  |  16|   0|   16|          0|
+    |temp_0_3_reg_933  |  16|   0|   16|          0|
+    |temp_1_0_reg_938  |  16|   0|   16|          0|
+    |temp_1_1_reg_943  |  16|   0|   16|          0|
+    |temp_1_2_reg_948  |  16|   0|   16|          0|
+    |temp_1_3_reg_953  |  16|   0|   16|          0|
+    |temp_2_0_reg_958  |  16|   0|   16|          0|
+    |temp_2_1_reg_963  |  16|   0|   16|          0|
+    |temp_2_2_reg_968  |  16|   0|   16|          0|
+    |temp_2_3_reg_973  |  16|   0|   16|          0|
+    |temp_3_0_reg_978  |  16|   0|   16|          0|
+    |temp_3_1_reg_983  |  16|   0|   16|          0|
+    |temp_3_2_reg_988  |  16|   0|   16|          0|
+    |temp_3_3_reg_993  |  16|   0|   16|          0|
+    |tmp_reg_998       |   1|   0|    1|          0|
+    +------------------+----+----+-----+-----------+
+    |Total             | 257|   0|  257|          0|
+    +------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+----------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++----------------+-----+-----+------------+----------------+--------------+
+|ap_clk          |  in |    1| ap_ctrl_hs |  add_watermark | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_0     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_1     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_2     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_3     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_4     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_5     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_6     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_7     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_8     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_9     | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_10    | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_11    | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_12    | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_13    | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_14    | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|ap_return_15    | out |    8| ap_ctrl_hs |  add_watermark | return value |
+|indata_0_read   |  in |    8|   ap_none  |  indata_0_read |    scalar    |
+|indata_1_read   |  in |    8|   ap_none  |  indata_1_read |    scalar    |
+|indata_2_read   |  in |    8|   ap_none  |  indata_2_read |    scalar    |
+|indata_3_read   |  in |    8|   ap_none  |  indata_3_read |    scalar    |
+|indata_4_read   |  in |    8|   ap_none  |  indata_4_read |    scalar    |
+|indata_5_read   |  in |    8|   ap_none  |  indata_5_read |    scalar    |
+|indata_6_read   |  in |    8|   ap_none  |  indata_6_read |    scalar    |
+|indata_7_read   |  in |    8|   ap_none  |  indata_7_read |    scalar    |
+|indata_8_read   |  in |    8|   ap_none  |  indata_8_read |    scalar    |
+|indata_9_read   |  in |    8|   ap_none  |  indata_9_read |    scalar    |
+|indata_10_read  |  in |    8|   ap_none  | indata_10_read |    scalar    |
+|indata_11_read  |  in |    8|   ap_none  | indata_11_read |    scalar    |
+|indata_12_read  |  in |    8|   ap_none  | indata_12_read |    scalar    |
+|indata_13_read  |  in |    8|   ap_none  | indata_13_read |    scalar    |
+|indata_14_read  |  in |    8|   ap_none  | indata_14_read |    scalar    |
+|indata_15_read  |  in |    8|   ap_none  | indata_15_read |    scalar    |
+|mark            |  in |    8|   ap_none  |      mark      |    scalar    |
++----------------+-----+-----+------------+----------------+--------------+
+

@@ -1,0 +1,211 @@
+
+
+================================================================
+== Vivado HLS Report for 'dct_step'
+================================================================
+* Date:           Fri Jul 20 11:59:07 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution4
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      1.46|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    0|    0|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.46ns
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%src_3_3_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_3_3_read)"
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%src_3_2_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_3_2_read)"
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%src_3_1_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_3_1_read)"
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%src_3_0_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_3_0_read)"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%src_2_3_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_2_3_read)"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%src_2_2_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_2_2_read)"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%src_2_1_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_2_1_read)"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%src_2_0_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_2_0_read)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%src_1_3_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_1_3_read)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%src_1_2_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_1_2_read)"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%src_1_1_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_1_1_read)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%src_1_0_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_1_0_read)"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%src_0_3_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_0_3_read)"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%src_0_2_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_0_2_read)"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%src_0_1_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_0_1_read)"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%src_0_0_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %src_0_0_read)"
+ST_1 : Operation 18 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i16 %src_1_0_read_1, %src_0_0_read_1" [dct_hls/dct.cpp:6]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 19 [1/1] (0.78ns)   --->   "%tmp2 = add i16 %src_2_0_read_1, %src_3_0_read_1" [dct_hls/dct.cpp:6]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_0_0_write_assi = add i16 %tmp2, %tmp1" [dct_hls/dct.cpp:6]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 21 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp3 = add i16 %src_1_1_read_1, %src_0_1_read_1" [dct_hls/dct.cpp:7]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 22 [1/1] (0.78ns)   --->   "%tmp4 = add i16 %src_2_1_read_1, %src_3_1_read_1" [dct_hls/dct.cpp:7]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_1_0_write_assi = add i16 %tmp4, %tmp3" [dct_hls/dct.cpp:7]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 24 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp5 = add i16 %src_1_2_read_1, %src_0_2_read_1" [dct_hls/dct.cpp:8]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 25 [1/1] (0.78ns)   --->   "%tmp6 = add i16 %src_2_2_read_1, %src_3_2_read_1" [dct_hls/dct.cpp:8]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_2_0_write_assi = add i16 %tmp6, %tmp5" [dct_hls/dct.cpp:8]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 27 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp7 = add i16 %src_1_3_read_1, %src_0_3_read_1" [dct_hls/dct.cpp:9]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 28 [1/1] (0.78ns)   --->   "%tmp8 = add i16 %src_2_3_read_1, %src_3_3_read_1" [dct_hls/dct.cpp:9]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_3_0_write_assi = add i16 %tmp8, %tmp7" [dct_hls/dct.cpp:9]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node tmp_s)   --->   "%tmp = shl i16 %src_0_0_read_1, 1" [dct_hls/dct.cpp:11]
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_81 = shl i16 %src_3_0_read_1, 1" [dct_hls/dct.cpp:11]
+ST_1 : Operation 32 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_s = add i16 %src_1_0_read_1, %tmp" [dct_hls/dct.cpp:11]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_54 = sub i16 %tmp_s, %src_2_0_read_1" [dct_hls/dct.cpp:11]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 34 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_0_1_write_assi = sub i16 %tmp_54, %tmp_81" [dct_hls/dct.cpp:11]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node tmp_55)   --->   "%tmp_82 = shl i16 %src_0_1_read_1, 1" [dct_hls/dct.cpp:12]
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_85 = shl i16 %src_3_1_read_1, 1" [dct_hls/dct.cpp:12]
+ST_1 : Operation 37 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_55 = add i16 %src_1_1_read_1, %tmp_82" [dct_hls/dct.cpp:12]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_56 = sub i16 %tmp_55, %src_2_1_read_1" [dct_hls/dct.cpp:12]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 39 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_1_1_write_assi = sub i16 %tmp_56, %tmp_85" [dct_hls/dct.cpp:12]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node tmp_57)   --->   "%tmp_86 = shl i16 %src_0_2_read_1, 1" [dct_hls/dct.cpp:13]
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_89 = shl i16 %src_3_2_read_1, 1" [dct_hls/dct.cpp:13]
+ST_1 : Operation 42 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_57 = add i16 %src_1_2_read_1, %tmp_86" [dct_hls/dct.cpp:13]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_58 = sub i16 %tmp_57, %src_2_2_read_1" [dct_hls/dct.cpp:13]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 44 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_2_1_write_assi = sub i16 %tmp_58, %tmp_89" [dct_hls/dct.cpp:13]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node tmp_59)   --->   "%tmp_90 = shl i16 %src_0_3_read_1, 1" [dct_hls/dct.cpp:14]
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_93 = shl i16 %src_3_3_read_1, 1" [dct_hls/dct.cpp:14]
+ST_1 : Operation 47 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_59 = add i16 %src_1_3_read_1, %tmp_90" [dct_hls/dct.cpp:14]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_60 = sub i16 %tmp_59, %src_2_3_read_1" [dct_hls/dct.cpp:14]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 49 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_3_1_write_assi = sub i16 %tmp_60, %tmp_93" [dct_hls/dct.cpp:14]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 50 [1/1] (0.78ns)   --->   "%tmp_61 = sub i16 %src_0_0_read_1, %src_1_0_read_1" [dct_hls/dct.cpp:16]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_62 = sub i16 %tmp_61, %src_2_0_read_1" [dct_hls/dct.cpp:16]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 52 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_0_2_write_assi = add i16 %src_3_0_read_1, %tmp_62" [dct_hls/dct.cpp:16]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 53 [1/1] (0.78ns)   --->   "%tmp_63 = sub i16 %src_0_1_read_1, %src_1_1_read_1" [dct_hls/dct.cpp:17]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_64 = sub i16 %tmp_63, %src_2_1_read_1" [dct_hls/dct.cpp:17]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 55 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_1_2_write_assi = add i16 %src_3_1_read_1, %tmp_64" [dct_hls/dct.cpp:17]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 56 [1/1] (0.78ns)   --->   "%tmp_65 = sub i16 %src_0_2_read_1, %src_1_2_read_1" [dct_hls/dct.cpp:18]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_66 = sub i16 %tmp_65, %src_2_2_read_1" [dct_hls/dct.cpp:18]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 58 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_2_2_write_assi = add i16 %src_3_2_read_1, %tmp_66" [dct_hls/dct.cpp:18]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 59 [1/1] (0.78ns)   --->   "%tmp_67 = sub i16 %src_0_3_read_1, %src_1_3_read_1" [dct_hls/dct.cpp:19]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 60 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_68 = sub i16 %tmp_67, %src_2_3_read_1" [dct_hls/dct.cpp:19]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 61 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_3_2_write_assi = add i16 %src_3_3_read_1, %tmp_68" [dct_hls/dct.cpp:19]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node tmp_69)   --->   "%tmp_94 = shl i16 %src_1_0_read_1, 1" [dct_hls/dct.cpp:21]
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_95 = shl i16 %src_2_0_read_1, 1" [dct_hls/dct.cpp:21]
+ST_1 : Operation 64 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_69 = sub i16 %src_0_0_read_1, %tmp_94" [dct_hls/dct.cpp:21]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 65 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_70 = add i16 %tmp_69, %tmp_95" [dct_hls/dct.cpp:21]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 66 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_0_3_write_assi = sub i16 %tmp_70, %src_3_0_read_1" [dct_hls/dct.cpp:21]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node tmp_71)   --->   "%tmp_96 = shl i16 %src_1_1_read_1, 1" [dct_hls/dct.cpp:22]
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_97 = shl i16 %src_2_1_read_1, 1" [dct_hls/dct.cpp:22]
+ST_1 : Operation 69 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_71 = sub i16 %src_0_1_read_1, %tmp_96" [dct_hls/dct.cpp:22]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 70 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_72 = add i16 %tmp_71, %tmp_97" [dct_hls/dct.cpp:22]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 71 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_1_3_write_assi = sub i16 %tmp_72, %src_3_1_read_1" [dct_hls/dct.cpp:22]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 72 [1/1] (0.00ns) (grouped into LUT with out node tmp_73)   --->   "%tmp_98 = shl i16 %src_1_2_read_1, 1" [dct_hls/dct.cpp:23]
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_99 = shl i16 %src_2_2_read_1, 1" [dct_hls/dct.cpp:23]
+ST_1 : Operation 74 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_73 = sub i16 %src_0_2_read_1, %tmp_98" [dct_hls/dct.cpp:23]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 75 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_74 = add i16 %tmp_73, %tmp_99" [dct_hls/dct.cpp:23]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 76 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_2_3_write_assi = sub i16 %tmp_74, %src_3_2_read_1" [dct_hls/dct.cpp:23]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node tmp_75)   --->   "%tmp_100 = shl i16 %src_1_3_read_1, 1" [dct_hls/dct.cpp:24]
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_101 = shl i16 %src_2_3_read_1, 1" [dct_hls/dct.cpp:24]
+ST_1 : Operation 79 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_75 = sub i16 %src_0_3_read_1, %tmp_100" [dct_hls/dct.cpp:24]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 80 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_76 = add i16 %tmp_75, %tmp_101" [dct_hls/dct.cpp:24]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 81 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%dst_3_3_write_assi = sub i16 %tmp_76, %src_3_3_read_1" [dct_hls/dct.cpp:24]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } undef, i16 %dst_0_0_write_assi, 0" [dct_hls/dct.cpp:25]
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv, i16 %dst_0_1_write_assi, 1" [dct_hls/dct.cpp:25]
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_1, i16 %dst_0_2_write_assi, 2" [dct_hls/dct.cpp:25]
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_2, i16 %dst_0_3_write_assi, 3" [dct_hls/dct.cpp:25]
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_3, i16 %dst_1_0_write_assi, 4" [dct_hls/dct.cpp:25]
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_4, i16 %dst_1_1_write_assi, 5" [dct_hls/dct.cpp:25]
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_5, i16 %dst_1_2_write_assi, 6" [dct_hls/dct.cpp:25]
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_6, i16 %dst_1_3_write_assi, 7" [dct_hls/dct.cpp:25]
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_7, i16 %dst_2_0_write_assi, 8" [dct_hls/dct.cpp:25]
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_8, i16 %dst_2_1_write_assi, 9" [dct_hls/dct.cpp:25]
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%mrv_10 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_9, i16 %dst_2_2_write_assi, 10" [dct_hls/dct.cpp:25]
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%mrv_11 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_10, i16 %dst_2_3_write_assi, 11" [dct_hls/dct.cpp:25]
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%mrv_12 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_11, i16 %dst_3_0_write_assi, 12" [dct_hls/dct.cpp:25]
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%mrv_13 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_12, i16 %dst_3_1_write_assi, 13" [dct_hls/dct.cpp:25]
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%mrv_14 = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_13, i16 %dst_3_2_write_assi, 14" [dct_hls/dct.cpp:25]
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_14, i16 %dst_3_3_write_assi, 15" [dct_hls/dct.cpp:25]
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "ret { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %mrv_s" [dct_hls/dct.cpp:25]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.46ns
+The critical path consists of the following:
+	wire read on port 'src_3_3_read' [17]  (0 ns)
+	'add' operation ('tmp8', dct_hls/dct.cpp:9) [43]  (0.785 ns)
+	'add' operation ('dst[3][0]', dct_hls/dct.cpp:9) [44]  (0.675 ns)
+	'insertvalue' operation ('mrv_12', dct_hls/dct.cpp:25) [109]  (0 ns)
+	'insertvalue' operation ('mrv_13', dct_hls/dct.cpp:25) [110]  (0 ns)
+	'insertvalue' operation ('mrv_14', dct_hls/dct.cpp:25) [111]  (0 ns)
+	'insertvalue' operation ('mrv_s', dct_hls/dct.cpp:25) [112]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

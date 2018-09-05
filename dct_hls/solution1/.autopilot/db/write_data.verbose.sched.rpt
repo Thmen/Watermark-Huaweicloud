@@ -1,0 +1,229 @@
+
+
+================================================================
+== Vivado HLS Report for 'write_data'
+================================================================
+* Date:           Tue Jul 17 14:58:49 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      0.59|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    7|    7|    8|    8| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 8, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 1
+  Pipeline-0 : II = 8, D = 8, States = { 1 2 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+
+* FSM state operations: 
+
+ <State 1> : 0.59ns
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_read_15 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read1)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_read16 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [16 x i16]* %output_r, i64 0, i64 0" [dct_hls/dct.cpp:129]
+ST_1 : Operation 12 [1/1] (0.59ns)   --->   "store i16 %p_read16, i16* %output_addr, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%output_addr_1 = getelementptr [16 x i16]* %output_r, i64 0, i64 1" [dct_hls/dct.cpp:129]
+ST_1 : Operation 14 [1/1] (0.59ns)   --->   "store i16 %p_read_15, i16* %output_addr_1, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 2> : 0.59ns
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%p_read_13 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read3)"
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%p_read_14 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read2)"
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%output_addr_2 = getelementptr [16 x i16]* %output_r, i64 0, i64 2" [dct_hls/dct.cpp:129]
+ST_2 : Operation 18 [1/1] (0.59ns)   --->   "store i16 %p_read_14, i16* %output_addr_2, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%output_addr_3 = getelementptr [16 x i16]* %output_r, i64 0, i64 3" [dct_hls/dct.cpp:129]
+ST_2 : Operation 20 [1/1] (0.59ns)   --->   "store i16 %p_read_13, i16* %output_addr_3, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 3> : 0.59ns
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%p_read_11 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read5)"
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%p_read_12 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read4)"
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%output_addr_4 = getelementptr [16 x i16]* %output_r, i64 0, i64 4" [dct_hls/dct.cpp:129]
+ST_3 : Operation 24 [1/1] (0.59ns)   --->   "store i16 %p_read_12, i16* %output_addr_4, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%output_addr_5 = getelementptr [16 x i16]* %output_r, i64 0, i64 5" [dct_hls/dct.cpp:129]
+ST_3 : Operation 26 [1/1] (0.59ns)   --->   "store i16 %p_read_11, i16* %output_addr_5, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 4> : 0.59ns
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%p_read_9 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read7)"
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%p_read_10 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read6)"
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%output_addr_6 = getelementptr [16 x i16]* %output_r, i64 0, i64 6" [dct_hls/dct.cpp:129]
+ST_4 : Operation 30 [1/1] (0.59ns)   --->   "store i16 %p_read_10, i16* %output_addr_6, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%output_addr_7 = getelementptr [16 x i16]* %output_r, i64 0, i64 7" [dct_hls/dct.cpp:129]
+ST_4 : Operation 32 [1/1] (0.59ns)   --->   "store i16 %p_read_9, i16* %output_addr_7, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 5> : 0.59ns
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%p_read_7 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read9)"
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%p_read_8 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read8)"
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%output_addr_8 = getelementptr [16 x i16]* %output_r, i64 0, i64 8" [dct_hls/dct.cpp:129]
+ST_5 : Operation 36 [1/1] (0.59ns)   --->   "store i16 %p_read_8, i16* %output_addr_8, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%output_addr_9 = getelementptr [16 x i16]* %output_r, i64 0, i64 9" [dct_hls/dct.cpp:129]
+ST_5 : Operation 38 [1/1] (0.59ns)   --->   "store i16 %p_read_7, i16* %output_addr_9, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 6> : 0.59ns
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%p_read_5 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read11)"
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%p_read_6 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read10)"
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%output_addr_10 = getelementptr [16 x i16]* %output_r, i64 0, i64 10" [dct_hls/dct.cpp:129]
+ST_6 : Operation 42 [1/1] (0.59ns)   --->   "store i16 %p_read_6, i16* %output_addr_10, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%output_addr_11 = getelementptr [16 x i16]* %output_r, i64 0, i64 11" [dct_hls/dct.cpp:129]
+ST_6 : Operation 44 [1/1] (0.59ns)   --->   "store i16 %p_read_5, i16* %output_addr_11, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 7> : 0.59ns
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%p_read_3 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read13)"
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%p_read_4 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read12)"
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%output_addr_12 = getelementptr [16 x i16]* %output_r, i64 0, i64 12" [dct_hls/dct.cpp:129]
+ST_7 : Operation 48 [1/1] (0.59ns)   --->   "store i16 %p_read_4, i16* %output_addr_12, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "%output_addr_13 = getelementptr [16 x i16]* %output_r, i64 0, i64 13" [dct_hls/dct.cpp:129]
+ST_7 : Operation 50 [1/1] (0.59ns)   --->   "store i16 %p_read_3, i16* %output_addr_13, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 8> : 0.59ns
+ST_8 : Operation 51 [1/1] (0.00ns)   --->   "%p_read_1 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read15)"
+ST_8 : Operation 52 [1/1] (0.00ns)   --->   "%p_read_2 = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %p_read14)"
+ST_8 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [dct_hls/dct.cpp:123]
+ST_8 : Operation 54 [1/1] (0.00ns)   --->   "%output_addr_14 = getelementptr [16 x i16]* %output_r, i64 0, i64 14" [dct_hls/dct.cpp:129]
+ST_8 : Operation 55 [1/1] (0.59ns)   --->   "store i16 %p_read_2, i16* %output_addr_14, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 56 [1/1] (0.00ns)   --->   "%output_addr_15 = getelementptr [16 x i16]* %output_r, i64 0, i64 15" [dct_hls/dct.cpp:129]
+ST_8 : Operation 57 [1/1] (0.59ns)   --->   "store i16 %p_read_1, i16* %output_addr_15, align 2" [dct_hls/dct.cpp:129]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 58 [1/1] (0.00ns)   --->   "ret void" [dct_hls/dct.cpp:131]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.594ns
+The critical path consists of the following:
+	wire read on port 'p_read1' [32]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:129) of variable 'p_read_15' on array 'output_r' [38]  (0.594 ns)
+
+ <State 2>: 0.594ns
+The critical path consists of the following:
+	wire read on port 'p_read3' [30]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:129) of variable 'p_read_13' on array 'output_r' [42]  (0.594 ns)
+
+ <State 3>: 0.594ns
+The critical path consists of the following:
+	wire read on port 'p_read5' [28]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:129) of variable 'p_read_11' on array 'output_r' [46]  (0.594 ns)
+
+ <State 4>: 0.594ns
+The critical path consists of the following:
+	wire read on port 'p_read7' [26]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:129) of variable 'p_read_9' on array 'output_r' [50]  (0.594 ns)
+
+ <State 5>: 0.594ns
+The critical path consists of the following:
+	wire read on port 'p_read9' [24]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:129) of variable 'p_read_7' on array 'output_r' [54]  (0.594 ns)
+
+ <State 6>: 0.594ns
+The critical path consists of the following:
+	wire read on port 'p_read11' [22]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:129) of variable 'p_read_5' on array 'output_r' [58]  (0.594 ns)
+
+ <State 7>: 0.594ns
+The critical path consists of the following:
+	wire read on port 'p_read13' [20]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:129) of variable 'p_read_3' on array 'output_r' [62]  (0.594 ns)
+
+ <State 8>: 0.594ns
+The critical path consists of the following:
+	wire read on port 'p_read15' [18]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:129) of variable 'p_read_1' on array 'output_r' [66]  (0.594 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

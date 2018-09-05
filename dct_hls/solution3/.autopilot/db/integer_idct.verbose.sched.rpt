@@ -1,0 +1,439 @@
+
+
+================================================================
+== Vivado HLS Report for 'integer_idct'
+================================================================
+* Date:           Fri Jul 20 11:48:11 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution3
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.44|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    7|    7|    7|    7|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+
+* FSM state operations: 
+
+ <State 1> : 6.44ns
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%src_3_3_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_3_3_V_read)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%src_3_2_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_3_2_V_read)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%src_3_1_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_3_1_V_read)"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%src_3_0_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_3_0_V_read)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%src_2_3_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_2_3_V_read)"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%src_2_2_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_2_2_V_read)"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%src_2_1_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_2_1_V_read)"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%src_2_0_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_2_0_V_read)"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%src_1_3_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_1_3_V_read)"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%src_1_2_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_1_2_V_read)"
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%src_1_1_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_1_1_V_read)"
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%src_1_0_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_1_0_V_read)"
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%src_0_3_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_0_3_V_read)"
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%src_0_2_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_0_2_V_read)"
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%src_0_1_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_0_1_V_read)"
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%src_0_0_V_read_1 = call i20 @_ssdm_op_Read.ap_auto.i20(i20 %src_0_0_V_read)"
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%out_addr = getelementptr [16 x i8]* %out_r, i64 0, i64 0" [dct_hls/dct.cpp:87]
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%out_addr_1 = getelementptr [16 x i8]* %out_r, i64 0, i64 1" [dct_hls/dct.cpp:87]
+ST_1 : Operation 27 [1/1] (2.10ns)   --->   "%call_ret1 = call fastcc { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } @idct_step(i20 %src_0_0_V_read_1, i20 %src_0_1_V_read_1, i20 %src_0_2_V_read_1, i20 %src_0_3_V_read_1, i20 %src_1_0_V_read_1, i20 %src_1_1_V_read_1, i20 %src_1_2_V_read_1, i20 %src_1_3_V_read_1, i20 %src_2_0_V_read_1, i20 %src_2_1_V_read_1, i20 %src_2_2_V_read_1, i20 %src_2_3_V_read_1, i20 %src_3_0_V_read_1, i20 %src_3_1_V_read_1, i20 %src_3_2_V_read_1, i20 %src_3_3_V_read_1)" [dct_hls/dct.cpp:76]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%temp_0_0_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 0" [dct_hls/dct.cpp:76]
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%temp_0_1_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 1" [dct_hls/dct.cpp:76]
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%temp_0_2_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 2" [dct_hls/dct.cpp:76]
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%temp_0_3_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 3" [dct_hls/dct.cpp:76]
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%temp_1_0_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 4" [dct_hls/dct.cpp:76]
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%temp_1_1_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 5" [dct_hls/dct.cpp:76]
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%temp_1_2_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 6" [dct_hls/dct.cpp:76]
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%temp_1_3_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 7" [dct_hls/dct.cpp:76]
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%temp_2_0_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 8" [dct_hls/dct.cpp:76]
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%temp_2_1_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 9" [dct_hls/dct.cpp:76]
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%temp_2_2_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 10" [dct_hls/dct.cpp:76]
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%temp_2_3_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 11" [dct_hls/dct.cpp:76]
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%temp_3_0_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 12" [dct_hls/dct.cpp:76]
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%temp_3_1_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 13" [dct_hls/dct.cpp:76]
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%temp_3_2_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 14" [dct_hls/dct.cpp:76]
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%temp_3_3_V = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret1, 15" [dct_hls/dct.cpp:76]
+ST_1 : Operation 44 [1/1] (2.10ns)   --->   "%call_ret = call fastcc { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } @idct_step(i20 %temp_0_0_V, i20 %temp_0_1_V, i20 %temp_0_2_V, i20 %temp_0_3_V, i20 %temp_1_0_V, i20 %temp_1_1_V, i20 %temp_1_2_V, i20 %temp_1_3_V, i20 %temp_2_0_V, i20 %temp_2_1_V, i20 %temp_2_2_V, i20 %temp_2_3_V, i20 %temp_3_0_V, i20 %temp_3_1_V, i20 %temp_3_2_V, i20 %temp_3_3_V)" [dct_hls/dct.cpp:77]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%dst = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 0" [dct_hls/dct.cpp:77]
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%dst_0_1 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 1" [dct_hls/dct.cpp:77]
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%dst_0_2 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 2" [dct_hls/dct.cpp:77]
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%dst_0_3 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 3" [dct_hls/dct.cpp:77]
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%dst_1 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 4" [dct_hls/dct.cpp:77]
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%dst_1_1 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 5" [dct_hls/dct.cpp:77]
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%dst_1_2 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 6" [dct_hls/dct.cpp:77]
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%dst_1_3 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 7" [dct_hls/dct.cpp:77]
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%dst_2 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 8" [dct_hls/dct.cpp:77]
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%dst_2_1 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 9" [dct_hls/dct.cpp:77]
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%dst_2_2 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 10" [dct_hls/dct.cpp:77]
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%dst_2_3 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 11" [dct_hls/dct.cpp:77]
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%dst_3 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 12" [dct_hls/dct.cpp:77]
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%dst_3_1 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 13" [dct_hls/dct.cpp:77]
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%dst_3_2 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 14" [dct_hls/dct.cpp:77]
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%dst_3_3 = extractvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %call_ret, 15" [dct_hls/dct.cpp:77]
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_33 = trunc i20 %dst to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 62 [1/1] (0.80ns)   --->   "%r_V = add i19 1024, %tmp_33" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%phitmp1 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%lhs_V_cast = sext i20 %dst to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 65 [1/1] (0.80ns)   --->   "%r_V_1 = add i21 4096, %lhs_V_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%phitmp = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 67 [1/1] (0.80ns)   --->   "%r_V_2 = add i21 32768, %lhs_V_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_4 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_5 = sext i5 %tmp_4 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 70 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp = add i8 %phitmp, %tmp_5" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 71 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_s = add i8 %phitmp1, %tmp" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 72 [1/1] (0.59ns)   --->   "store i8 %tmp_s, i8* %out_addr, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_34 = trunc i20 %dst_1 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 74 [1/1] (0.80ns)   --->   "%r_V_0_1 = add i19 1024, %tmp_34" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%phitmp1_0_1 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_0_1, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%lhs_V_0_1_cast = sext i20 %dst_1 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 77 [1/1] (0.80ns)   --->   "%r_V_1_0_1 = add i21 4096, %lhs_V_0_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%phitmp_0_1 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_0_1, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 79 [1/1] (0.80ns)   --->   "%r_V_2_0_1 = add i21 32768, %lhs_V_0_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_9 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_0_1, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%tmp_1 = sext i5 %tmp_9 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 82 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i8 %phitmp_0_1, %tmp_1" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 83 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_0_1 = add i8 %phitmp1_0_1, %tmp1" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 84 [1/1] (0.59ns)   --->   "store i8 %tmp_11_0_1, i8* %out_addr_1, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_35 = trunc i20 %dst_2 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 86 [1/1] (0.80ns)   --->   "%r_V_0_2 = add i19 1024, %tmp_35" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%phitmp1_0_2 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_0_2, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%lhs_V_0_2_cast = sext i20 %dst_2 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 89 [1/1] (0.80ns)   --->   "%r_V_1_0_2 = add i21 4096, %lhs_V_0_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%phitmp_0_2 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_0_2, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 91 [1/1] (0.80ns)   --->   "%r_V_2_0_2 = add i21 32768, %lhs_V_0_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%tmp_2 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_0_2, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_3 = sext i5 %tmp_2 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 94 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp2 = add i8 %phitmp_0_2, %tmp_3" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 95 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_0_2 = add i8 %phitmp1_0_2, %tmp2" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_36 = trunc i20 %dst_3 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 97 [1/1] (0.80ns)   --->   "%r_V_0_3 = add i19 1024, %tmp_36" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%phitmp1_0_3 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_0_3, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%lhs_V_0_3_cast = sext i20 %dst_3 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 100 [1/1] (0.80ns)   --->   "%r_V_1_0_3 = add i21 4096, %lhs_V_0_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%phitmp_0_3 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_0_3, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 102 [1/1] (0.80ns)   --->   "%r_V_2_0_3 = add i21 32768, %lhs_V_0_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_6 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_0_3, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_7 = sext i5 %tmp_6 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 105 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp3 = add i8 %phitmp_0_3, %tmp_7" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 106 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_0_3 = add i8 %phitmp1_0_3, %tmp3" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_37 = trunc i20 %dst_0_1 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 108 [1/1] (0.80ns)   --->   "%r_V_s = add i19 1024, %tmp_37" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%phitmp1_1 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_s, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%lhs_V_1_cast = sext i20 %dst_0_1 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 111 [1/1] (0.80ns)   --->   "%r_V_1_1 = add i21 4096, %lhs_V_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%phitmp_1 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_1, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 113 [1/1] (0.80ns)   --->   "%r_V_2_1 = add i21 32768, %lhs_V_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_8 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_1, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_10 = sext i5 %tmp_8 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 116 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp4 = add i8 %phitmp_1, %tmp_10" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 117 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_1 = add i8 %phitmp1_1, %tmp4" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_38 = trunc i20 %dst_1_1 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 119 [1/1] (0.80ns)   --->   "%r_V_13_1 = add i19 1024, %tmp_38" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%phitmp1_1_1 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_13_1, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%lhs_V_1_1_cast = sext i20 %dst_1_1 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 122 [1/1] (0.80ns)   --->   "%r_V_1_1_1 = add i21 4096, %lhs_V_1_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%phitmp_1_1 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_1_1, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 124 [1/1] (0.80ns)   --->   "%r_V_2_1_1 = add i21 32768, %lhs_V_1_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%tmp_11 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_1_1, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%tmp_12 = sext i5 %tmp_11 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 127 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp5 = add i8 %phitmp_1_1, %tmp_12" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 128 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_1_1 = add i8 %phitmp1_1_1, %tmp5" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_39 = trunc i20 %dst_2_1 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 130 [1/1] (0.80ns)   --->   "%r_V_13_2 = add i19 1024, %tmp_39" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%phitmp1_1_2 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_13_2, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%lhs_V_1_2_cast = sext i20 %dst_2_1 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 133 [1/1] (0.80ns)   --->   "%r_V_1_1_2 = add i21 4096, %lhs_V_1_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%phitmp_1_2 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_1_2, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 135 [1/1] (0.80ns)   --->   "%r_V_2_1_2 = add i21 32768, %lhs_V_1_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%tmp_13 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_1_2, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%tmp_14 = sext i5 %tmp_13 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 138 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp6 = add i8 %phitmp_1_2, %tmp_14" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 139 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_1_2 = add i8 %phitmp1_1_2, %tmp6" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_40 = trunc i20 %dst_3_1 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 141 [1/1] (0.80ns)   --->   "%r_V_13_3 = add i19 1024, %tmp_40" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%phitmp1_1_3 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_13_3, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%lhs_V_1_3_cast = sext i20 %dst_3_1 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 144 [1/1] (0.80ns)   --->   "%r_V_1_1_3 = add i21 4096, %lhs_V_1_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%phitmp_1_3 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_1_3, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 146 [1/1] (0.80ns)   --->   "%r_V_2_1_3 = add i21 32768, %lhs_V_1_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_15 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_1_3, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_16 = sext i5 %tmp_15 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 149 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp7 = add i8 %phitmp_1_3, %tmp_16" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 150 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_1_3 = add i8 %phitmp1_1_3, %tmp7" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_41 = trunc i20 %dst_0_2 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 152 [1/1] (0.80ns)   --->   "%r_V_4 = add i19 1024, %tmp_41" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%phitmp1_2 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_4, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%lhs_V_2_cast = sext i20 %dst_0_2 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 155 [1/1] (0.80ns)   --->   "%r_V_1_2 = add i21 4096, %lhs_V_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%phitmp_2 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_2, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 157 [1/1] (0.80ns)   --->   "%r_V_2_2 = add i21 32768, %lhs_V_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%tmp_17 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_2, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%tmp_18 = sext i5 %tmp_17 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 160 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp8 = add i8 %phitmp_2, %tmp_18" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 161 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_2 = add i8 %phitmp1_2, %tmp8" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%tmp_42 = trunc i20 %dst_1_2 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 163 [1/1] (0.80ns)   --->   "%r_V_24_1 = add i19 1024, %tmp_42" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%phitmp1_2_1 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_24_1, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%lhs_V_2_1_cast = sext i20 %dst_1_2 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 166 [1/1] (0.80ns)   --->   "%r_V_1_2_1 = add i21 4096, %lhs_V_2_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%phitmp_2_1 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_2_1, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 168 [1/1] (0.80ns)   --->   "%r_V_2_2_1 = add i21 32768, %lhs_V_2_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_19 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_2_1, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%tmp_20 = sext i5 %tmp_19 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 171 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp9 = add i8 %phitmp_2_1, %tmp_20" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 172 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_2_1 = add i8 %phitmp1_2_1, %tmp9" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%tmp_43 = trunc i20 %dst_2_2 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 174 [1/1] (0.80ns)   --->   "%r_V_24_2 = add i19 1024, %tmp_43" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%phitmp1_2_2 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_24_2, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%lhs_V_2_2_cast = sext i20 %dst_2_2 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 177 [1/1] (0.80ns)   --->   "%r_V_1_2_2 = add i21 4096, %lhs_V_2_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%phitmp_2_2 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_2_2, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 179 [1/1] (0.80ns)   --->   "%r_V_2_2_2 = add i21 32768, %lhs_V_2_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%tmp_21 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_2_2, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%tmp_22 = sext i5 %tmp_21 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 182 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp10 = add i8 %phitmp_2_2, %tmp_22" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 183 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_2_2 = add i8 %phitmp1_2_2, %tmp10" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%tmp_44 = trunc i20 %dst_3_2 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 185 [1/1] (0.80ns)   --->   "%r_V_24_3 = add i19 1024, %tmp_44" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%phitmp1_2_3 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_24_3, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%lhs_V_2_3_cast = sext i20 %dst_3_2 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 188 [1/1] (0.80ns)   --->   "%r_V_1_2_3 = add i21 4096, %lhs_V_2_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%phitmp_2_3 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_2_3, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 190 [1/1] (0.80ns)   --->   "%r_V_2_2_3 = add i21 32768, %lhs_V_2_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%tmp_23 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_2_3, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%tmp_24 = sext i5 %tmp_23 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 193 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp11 = add i8 %phitmp_2_3, %tmp_24" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 194 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_2_3 = add i8 %phitmp1_2_3, %tmp11" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%tmp_45 = trunc i20 %dst_0_3 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 196 [1/1] (0.80ns)   --->   "%r_V_3 = add i19 1024, %tmp_45" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%phitmp1_3 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_3, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%lhs_V_3_cast = sext i20 %dst_0_3 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 199 [1/1] (0.80ns)   --->   "%r_V_1_3 = add i21 4096, %lhs_V_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%phitmp_3 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_3, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 201 [1/1] (0.80ns)   --->   "%r_V_2_3 = add i21 32768, %lhs_V_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%tmp_25 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_3, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%tmp_26 = sext i5 %tmp_25 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 204 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp12 = add i8 %phitmp_3, %tmp_26" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 205 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_3 = add i8 %phitmp1_3, %tmp12" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%tmp_46 = trunc i20 %dst_1_3 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 207 [1/1] (0.80ns)   --->   "%r_V_3_1 = add i19 1024, %tmp_46" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "%phitmp1_3_1 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_3_1, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%lhs_V_3_1_cast = sext i20 %dst_1_3 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 210 [1/1] (0.80ns)   --->   "%r_V_1_3_1 = add i21 4096, %lhs_V_3_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%phitmp_3_1 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_3_1, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 212 [1/1] (0.80ns)   --->   "%r_V_2_3_1 = add i21 32768, %lhs_V_3_1_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%tmp_27 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_3_1, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "%tmp_28 = sext i5 %tmp_27 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 215 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp13 = add i8 %phitmp_3_1, %tmp_28" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 216 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_3_1 = add i8 %phitmp1_3_1, %tmp13" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 217 [1/1] (0.00ns)   --->   "%tmp_47 = trunc i20 %dst_2_3 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 218 [1/1] (0.80ns)   --->   "%r_V_3_2 = add i19 1024, %tmp_47" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%phitmp1_3_2 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_3_2, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "%lhs_V_3_2_cast = sext i20 %dst_2_3 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 221 [1/1] (0.80ns)   --->   "%r_V_1_3_2 = add i21 4096, %lhs_V_3_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 222 [1/1] (0.00ns)   --->   "%phitmp_3_2 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_3_2, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 223 [1/1] (0.80ns)   --->   "%r_V_2_3_2 = add i21 32768, %lhs_V_3_2_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "%tmp_29 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_3_2, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 225 [1/1] (0.00ns)   --->   "%tmp_30 = sext i5 %tmp_29 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 226 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp14 = add i8 %phitmp_3_2, %tmp_30" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 227 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_3_2 = add i8 %phitmp1_3_2, %tmp14" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 228 [1/1] (0.00ns)   --->   "%tmp_48 = trunc i20 %dst_3_3 to i19" [dct_hls/dct.cpp:87]
+ST_1 : Operation 229 [1/1] (0.80ns)   --->   "%r_V_3_3 = add i19 1024, %tmp_48" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 230 [1/1] (0.00ns)   --->   "%phitmp1_3_3 = call i8 @_ssdm_op_PartSelect.i8.i19.i32.i32(i19 %r_V_3_3, i32 11, i32 18)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 231 [1/1] (0.00ns)   --->   "%lhs_V_3_3_cast = sext i20 %dst_3_3 to i21" [dct_hls/dct.cpp:87]
+ST_1 : Operation 232 [1/1] (0.80ns)   --->   "%r_V_1_3_3 = add i21 4096, %lhs_V_3_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 233 [1/1] (0.00ns)   --->   "%phitmp_3_3 = call i8 @_ssdm_op_PartSelect.i8.i21.i32.i32(i21 %r_V_1_3_3, i32 13, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 234 [1/1] (0.80ns)   --->   "%r_V_2_3_3 = add i21 32768, %lhs_V_3_3_cast" [dct_hls/dct.cpp:87]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 235 [1/1] (0.00ns)   --->   "%tmp_31 = call i5 @_ssdm_op_PartSelect.i5.i21.i32.i32(i21 %r_V_2_3_3, i32 16, i32 20)" [dct_hls/dct.cpp:87]
+ST_1 : Operation 236 [1/1] (0.00ns)   --->   "%tmp_32 = sext i5 %tmp_31 to i8" [dct_hls/dct.cpp:87]
+ST_1 : Operation 237 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp15 = add i8 %phitmp_3_3, %tmp_32" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 238 [1/1] (0.83ns) (root node of TernaryAdder)   --->   "%tmp_11_3_3 = add i8 %phitmp1_3_3, %tmp15" [dct_hls/dct.cpp:87]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.41> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+ <State 2> : 0.59ns
+ST_2 : Operation 239 [1/1] (0.00ns)   --->   "%out_addr_2 = getelementptr [16 x i8]* %out_r, i64 0, i64 2" [dct_hls/dct.cpp:87]
+ST_2 : Operation 240 [1/1] (0.00ns)   --->   "%out_addr_3 = getelementptr [16 x i8]* %out_r, i64 0, i64 3" [dct_hls/dct.cpp:87]
+ST_2 : Operation 241 [1/1] (0.59ns)   --->   "store i8 %tmp_11_0_2, i8* %out_addr_2, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 242 [1/1] (0.59ns)   --->   "store i8 %tmp_11_0_3, i8* %out_addr_3, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 3> : 0.59ns
+ST_3 : Operation 243 [1/1] (0.00ns)   --->   "%out_addr_4 = getelementptr [16 x i8]* %out_r, i64 0, i64 4" [dct_hls/dct.cpp:87]
+ST_3 : Operation 244 [1/1] (0.00ns)   --->   "%out_addr_5 = getelementptr [16 x i8]* %out_r, i64 0, i64 5" [dct_hls/dct.cpp:87]
+ST_3 : Operation 245 [1/1] (0.59ns)   --->   "store i8 %tmp_11_1, i8* %out_addr_4, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 246 [1/1] (0.59ns)   --->   "store i8 %tmp_11_1_1, i8* %out_addr_5, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 4> : 0.59ns
+ST_4 : Operation 247 [1/1] (0.00ns)   --->   "%out_addr_6 = getelementptr [16 x i8]* %out_r, i64 0, i64 6" [dct_hls/dct.cpp:87]
+ST_4 : Operation 248 [1/1] (0.00ns)   --->   "%out_addr_7 = getelementptr [16 x i8]* %out_r, i64 0, i64 7" [dct_hls/dct.cpp:87]
+ST_4 : Operation 249 [1/1] (0.59ns)   --->   "store i8 %tmp_11_1_2, i8* %out_addr_6, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 250 [1/1] (0.59ns)   --->   "store i8 %tmp_11_1_3, i8* %out_addr_7, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 5> : 0.59ns
+ST_5 : Operation 251 [1/1] (0.00ns)   --->   "%out_addr_8 = getelementptr [16 x i8]* %out_r, i64 0, i64 8" [dct_hls/dct.cpp:87]
+ST_5 : Operation 252 [1/1] (0.00ns)   --->   "%out_addr_9 = getelementptr [16 x i8]* %out_r, i64 0, i64 9" [dct_hls/dct.cpp:87]
+ST_5 : Operation 253 [1/1] (0.59ns)   --->   "store i8 %tmp_11_2, i8* %out_addr_8, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 254 [1/1] (0.59ns)   --->   "store i8 %tmp_11_2_1, i8* %out_addr_9, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 6> : 0.59ns
+ST_6 : Operation 255 [1/1] (0.00ns)   --->   "%out_addr_10 = getelementptr [16 x i8]* %out_r, i64 0, i64 10" [dct_hls/dct.cpp:87]
+ST_6 : Operation 256 [1/1] (0.00ns)   --->   "%out_addr_11 = getelementptr [16 x i8]* %out_r, i64 0, i64 11" [dct_hls/dct.cpp:87]
+ST_6 : Operation 257 [1/1] (0.59ns)   --->   "store i8 %tmp_11_2_2, i8* %out_addr_10, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 258 [1/1] (0.59ns)   --->   "store i8 %tmp_11_2_3, i8* %out_addr_11, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 7> : 0.59ns
+ST_7 : Operation 259 [1/1] (0.00ns)   --->   "%out_addr_12 = getelementptr [16 x i8]* %out_r, i64 0, i64 12" [dct_hls/dct.cpp:87]
+ST_7 : Operation 260 [1/1] (0.00ns)   --->   "%out_addr_13 = getelementptr [16 x i8]* %out_r, i64 0, i64 13" [dct_hls/dct.cpp:87]
+ST_7 : Operation 261 [1/1] (0.59ns)   --->   "store i8 %tmp_11_3, i8* %out_addr_12, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 262 [1/1] (0.59ns)   --->   "store i8 %tmp_11_3_1, i8* %out_addr_13, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+ <State 8> : 0.59ns
+ST_8 : Operation 263 [1/1] (0.00ns)   --->   "%out_addr_14 = getelementptr [16 x i8]* %out_r, i64 0, i64 14" [dct_hls/dct.cpp:87]
+ST_8 : Operation 264 [1/1] (0.00ns)   --->   "%out_addr_15 = getelementptr [16 x i8]* %out_r, i64 0, i64 15" [dct_hls/dct.cpp:87]
+ST_8 : Operation 265 [1/1] (0.59ns)   --->   "store i8 %tmp_11_3_2, i8* %out_addr_14, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 266 [1/1] (0.59ns)   --->   "store i8 %tmp_11_3_3, i8* %out_addr_15, align 1" [dct_hls/dct.cpp:87]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 267 [1/1] (0.00ns)   --->   "ret void" [dct_hls/dct.cpp:91]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 6.44ns
+The critical path consists of the following:
+	wire read on port 'src_3_3_V_read' [18]  (0 ns)
+	'call' operation ('call_ret1', dct_hls/dct.cpp:76) to 'idct_step' [50]  (2.1 ns)
+	'call' operation ('call_ret', dct_hls/dct.cpp:77) to 'idct_step' [67]  (2.1 ns)
+	'add' operation ('r_V_1_0_1', dct_hls/dct.cpp:87) [100]  (0.809 ns)
+	'add' operation ('tmp1', dct_hls/dct.cpp:87) [105]  (0 ns)
+	'add' operation ('tmp_11_0_1', dct_hls/dct.cpp:87) [106]  (0.838 ns)
+	'store' operation (dct_hls/dct.cpp:87) of variable 'tmp_11_0_1', dct_hls/dct.cpp:87 on array 'out_r' [107]  (0.594 ns)
+
+ <State 2>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('out_addr_2', dct_hls/dct.cpp:87) [36]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:87) of variable 'tmp_11_0_2', dct_hls/dct.cpp:87 on array 'out_r' [119]  (0.594 ns)
+
+ <State 3>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('out_addr_4', dct_hls/dct.cpp:87) [38]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:87) of variable 'tmp_11_1', dct_hls/dct.cpp:87 on array 'out_r' [143]  (0.594 ns)
+
+ <State 4>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('out_addr_6', dct_hls/dct.cpp:87) [40]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:87) of variable 'tmp_11_1_2', dct_hls/dct.cpp:87 on array 'out_r' [167]  (0.594 ns)
+
+ <State 5>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('out_addr_8', dct_hls/dct.cpp:87) [42]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:87) of variable 'tmp_11_2', dct_hls/dct.cpp:87 on array 'out_r' [191]  (0.594 ns)
+
+ <State 6>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('out_addr_10', dct_hls/dct.cpp:87) [44]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:87) of variable 'tmp_11_2_2', dct_hls/dct.cpp:87 on array 'out_r' [215]  (0.594 ns)
+
+ <State 7>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('out_addr_12', dct_hls/dct.cpp:87) [46]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:87) of variable 'tmp_11_3', dct_hls/dct.cpp:87 on array 'out_r' [239]  (0.594 ns)
+
+ <State 8>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('out_addr_14', dct_hls/dct.cpp:87) [48]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:87) of variable 'tmp_11_3_2', dct_hls/dct.cpp:87 on array 'out_r' [263]  (0.594 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

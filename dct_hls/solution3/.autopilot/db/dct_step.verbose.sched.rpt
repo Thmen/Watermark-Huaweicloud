@@ -1,0 +1,348 @@
+
+
+================================================================
+== Vivado HLS Report for 'dct_step'
+================================================================
+* Date:           Fri Jul 20 11:48:09 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution3
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      2.65|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    9|    9|    9|    9|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 10
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+
+* FSM state operations: 
+
+ <State 1> : 0.59ns
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%src_addr = getelementptr [16 x i16]* %src, i64 0, i64 0" [dct_hls/dct.cpp:6]
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%src_addr_1 = getelementptr [16 x i16]* %src, i64 0, i64 4" [dct_hls/dct.cpp:6]
+ST_1 : Operation 13 [2/2] (0.59ns)   --->   "%src_load = load i16* %src_addr, align 2" [dct_hls/dct.cpp:6]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 14 [2/2] (0.59ns)   --->   "%src_load_1 = load i16* %src_addr_1, align 2" [dct_hls/dct.cpp:6]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 2> : 0.59ns
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%src_addr_2 = getelementptr [16 x i16]* %src, i64 0, i64 8" [dct_hls/dct.cpp:6]
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%src_addr_3 = getelementptr [16 x i16]* %src, i64 0, i64 12" [dct_hls/dct.cpp:6]
+ST_2 : Operation 17 [1/2] (0.59ns)   --->   "%src_load = load i16* %src_addr, align 2" [dct_hls/dct.cpp:6]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 18 [1/2] (0.59ns)   --->   "%src_load_1 = load i16* %src_addr_1, align 2" [dct_hls/dct.cpp:6]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 19 [2/2] (0.59ns)   --->   "%src_load_2 = load i16* %src_addr_2, align 2" [dct_hls/dct.cpp:6]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 20 [2/2] (0.59ns)   --->   "%src_load_3 = load i16* %src_addr_3, align 2" [dct_hls/dct.cpp:6]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 3> : 2.65ns
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%src_addr_4 = getelementptr [16 x i16]* %src, i64 0, i64 1" [dct_hls/dct.cpp:7]
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%src_addr_5 = getelementptr [16 x i16]* %src, i64 0, i64 5" [dct_hls/dct.cpp:7]
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%dst_addr = getelementptr [16 x i16]* %dst, i64 0, i64 0" [dct_hls/dct.cpp:6]
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%dst_addr_4 = getelementptr [16 x i16]* %dst, i64 0, i64 1" [dct_hls/dct.cpp:11]
+ST_3 : Operation 25 [1/2] (0.59ns)   --->   "%src_load_2 = load i16* %src_addr_2, align 2" [dct_hls/dct.cpp:6]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 26 [1/2] (0.59ns)   --->   "%src_load_3 = load i16* %src_addr_3, align 2" [dct_hls/dct.cpp:6]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 27 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i16 %src_load_1, %src_load" [dct_hls/dct.cpp:6]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 28 [1/1] (0.78ns)   --->   "%tmp2 = add i16 %src_load_2, %src_load_3" [dct_hls/dct.cpp:6]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 29 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_s = add i16 %tmp2, %tmp1" [dct_hls/dct.cpp:6]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 30 [1/1] (0.59ns)   --->   "store i16 %tmp_s, i16* %dst_addr, align 2" [dct_hls/dct.cpp:6]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 31 [2/2] (0.59ns)   --->   "%src_load_4 = load i16* %src_addr_4, align 2" [dct_hls/dct.cpp:7]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 32 [2/2] (0.59ns)   --->   "%src_load_5 = load i16* %src_addr_5, align 2" [dct_hls/dct.cpp:7]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node tmp_56)   --->   "%tmp = shl i16 %src_load, 1" [dct_hls/dct.cpp:11]
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_88 = shl i16 %src_load_3, 1" [dct_hls/dct.cpp:11]
+ST_3 : Operation 35 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_56 = add i16 %src_load_1, %tmp" [dct_hls/dct.cpp:11]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_57 = sub i16 %tmp_56, %src_load_2" [dct_hls/dct.cpp:11]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 37 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_58 = sub i16 %tmp_57, %tmp_88" [dct_hls/dct.cpp:11]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 38 [1/1] (0.59ns)   --->   "store i16 %tmp_58, i16* %dst_addr_4, align 2" [dct_hls/dct.cpp:11]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 39 [1/1] (0.78ns)   --->   "%tmp_68 = sub i16 %src_load, %src_load_1" [dct_hls/dct.cpp:16]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_69 = sub i16 %tmp_68, %src_load_2" [dct_hls/dct.cpp:16]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 41 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_70 = add i16 %src_load_3, %tmp_69" [dct_hls/dct.cpp:16]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node tmp_80)   --->   "%tmp_104 = shl i16 %src_load_1, 1" [dct_hls/dct.cpp:21]
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_108 = shl i16 %src_load_2, 1" [dct_hls/dct.cpp:21]
+ST_3 : Operation 44 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_80 = sub i16 %src_load, %tmp_104" [dct_hls/dct.cpp:21]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_81 = add i16 %tmp_80, %tmp_108" [dct_hls/dct.cpp:21]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 46 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_82 = sub i16 %tmp_81, %src_load_3" [dct_hls/dct.cpp:21]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+ <State 4> : 0.59ns
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%src_addr_6 = getelementptr [16 x i16]* %src, i64 0, i64 9" [dct_hls/dct.cpp:7]
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%src_addr_7 = getelementptr [16 x i16]* %src, i64 0, i64 13" [dct_hls/dct.cpp:7]
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%dst_addr_8 = getelementptr [16 x i16]* %dst, i64 0, i64 2" [dct_hls/dct.cpp:16]
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%dst_addr_12 = getelementptr [16 x i16]* %dst, i64 0, i64 3" [dct_hls/dct.cpp:21]
+ST_4 : Operation 51 [1/2] (0.59ns)   --->   "%src_load_4 = load i16* %src_addr_4, align 2" [dct_hls/dct.cpp:7]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 52 [1/2] (0.59ns)   --->   "%src_load_5 = load i16* %src_addr_5, align 2" [dct_hls/dct.cpp:7]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 53 [2/2] (0.59ns)   --->   "%src_load_6 = load i16* %src_addr_6, align 2" [dct_hls/dct.cpp:7]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 54 [2/2] (0.59ns)   --->   "%src_load_7 = load i16* %src_addr_7, align 2" [dct_hls/dct.cpp:7]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 55 [1/1] (0.59ns)   --->   "store i16 %tmp_70, i16* %dst_addr_8, align 2" [dct_hls/dct.cpp:16]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 56 [1/1] (0.59ns)   --->   "store i16 %tmp_82, i16* %dst_addr_12, align 2" [dct_hls/dct.cpp:21]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 5> : 2.65ns
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%src_addr_8 = getelementptr [16 x i16]* %src, i64 0, i64 2" [dct_hls/dct.cpp:8]
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%src_addr_9 = getelementptr [16 x i16]* %src, i64 0, i64 6" [dct_hls/dct.cpp:8]
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%dst_addr_1 = getelementptr [16 x i16]* %dst, i64 0, i64 4" [dct_hls/dct.cpp:7]
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%dst_addr_5 = getelementptr [16 x i16]* %dst, i64 0, i64 5" [dct_hls/dct.cpp:12]
+ST_5 : Operation 61 [1/2] (0.59ns)   --->   "%src_load_6 = load i16* %src_addr_6, align 2" [dct_hls/dct.cpp:7]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 62 [1/2] (0.59ns)   --->   "%src_load_7 = load i16* %src_addr_7, align 2" [dct_hls/dct.cpp:7]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 63 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp3 = add i16 %src_load_5, %src_load_4" [dct_hls/dct.cpp:7]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 64 [1/1] (0.78ns)   --->   "%tmp4 = add i16 %src_load_6, %src_load_7" [dct_hls/dct.cpp:7]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 65 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_53 = add i16 %tmp4, %tmp3" [dct_hls/dct.cpp:7]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 66 [1/1] (0.59ns)   --->   "store i16 %tmp_53, i16* %dst_addr_1, align 2" [dct_hls/dct.cpp:7]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 67 [2/2] (0.59ns)   --->   "%src_load_8 = load i16* %src_addr_8, align 2" [dct_hls/dct.cpp:8]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 68 [2/2] (0.59ns)   --->   "%src_load_9 = load i16* %src_addr_9, align 2" [dct_hls/dct.cpp:8]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 69 [1/1] (0.00ns) (grouped into LUT with out node tmp_59)   --->   "%tmp_89 = shl i16 %src_load_4, 1" [dct_hls/dct.cpp:12]
+ST_5 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_93 = shl i16 %src_load_7, 1" [dct_hls/dct.cpp:12]
+ST_5 : Operation 71 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_59 = add i16 %src_load_5, %tmp_89" [dct_hls/dct.cpp:12]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 72 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_60 = sub i16 %tmp_59, %src_load_6" [dct_hls/dct.cpp:12]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 73 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_61 = sub i16 %tmp_60, %tmp_93" [dct_hls/dct.cpp:12]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 74 [1/1] (0.59ns)   --->   "store i16 %tmp_61, i16* %dst_addr_5, align 2" [dct_hls/dct.cpp:12]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_5 : Operation 75 [1/1] (0.78ns)   --->   "%tmp_71 = sub i16 %src_load_4, %src_load_5" [dct_hls/dct.cpp:17]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 76 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_72 = sub i16 %tmp_71, %src_load_6" [dct_hls/dct.cpp:17]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 77 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_73 = add i16 %src_load_7, %tmp_72" [dct_hls/dct.cpp:17]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node tmp_83)   --->   "%tmp_109 = shl i16 %src_load_5, 1" [dct_hls/dct.cpp:22]
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_110 = shl i16 %src_load_6, 1" [dct_hls/dct.cpp:22]
+ST_5 : Operation 80 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_83 = sub i16 %src_load_4, %tmp_109" [dct_hls/dct.cpp:22]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 81 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_84 = add i16 %tmp_83, %tmp_110" [dct_hls/dct.cpp:22]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 82 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_85 = sub i16 %tmp_84, %src_load_7" [dct_hls/dct.cpp:22]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+ <State 6> : 0.59ns
+ST_6 : Operation 83 [1/1] (0.00ns)   --->   "%src_addr_10 = getelementptr [16 x i16]* %src, i64 0, i64 10" [dct_hls/dct.cpp:8]
+ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%src_addr_11 = getelementptr [16 x i16]* %src, i64 0, i64 14" [dct_hls/dct.cpp:8]
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%dst_addr_9 = getelementptr [16 x i16]* %dst, i64 0, i64 6" [dct_hls/dct.cpp:17]
+ST_6 : Operation 86 [1/1] (0.00ns)   --->   "%dst_addr_13 = getelementptr [16 x i16]* %dst, i64 0, i64 7" [dct_hls/dct.cpp:22]
+ST_6 : Operation 87 [1/2] (0.59ns)   --->   "%src_load_8 = load i16* %src_addr_8, align 2" [dct_hls/dct.cpp:8]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_6 : Operation 88 [1/2] (0.59ns)   --->   "%src_load_9 = load i16* %src_addr_9, align 2" [dct_hls/dct.cpp:8]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_6 : Operation 89 [2/2] (0.59ns)   --->   "%src_load_10 = load i16* %src_addr_10, align 2" [dct_hls/dct.cpp:8]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_6 : Operation 90 [2/2] (0.59ns)   --->   "%src_load_11 = load i16* %src_addr_11, align 2" [dct_hls/dct.cpp:8]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_6 : Operation 91 [1/1] (0.59ns)   --->   "store i16 %tmp_73, i16* %dst_addr_9, align 2" [dct_hls/dct.cpp:17]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_6 : Operation 92 [1/1] (0.59ns)   --->   "store i16 %tmp_85, i16* %dst_addr_13, align 2" [dct_hls/dct.cpp:22]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 7> : 2.65ns
+ST_7 : Operation 93 [1/1] (0.00ns)   --->   "%src_addr_12 = getelementptr [16 x i16]* %src, i64 0, i64 3" [dct_hls/dct.cpp:9]
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "%src_addr_13 = getelementptr [16 x i16]* %src, i64 0, i64 7" [dct_hls/dct.cpp:9]
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%dst_addr_2 = getelementptr [16 x i16]* %dst, i64 0, i64 8" [dct_hls/dct.cpp:8]
+ST_7 : Operation 96 [1/1] (0.00ns)   --->   "%dst_addr_6 = getelementptr [16 x i16]* %dst, i64 0, i64 9" [dct_hls/dct.cpp:13]
+ST_7 : Operation 97 [1/2] (0.59ns)   --->   "%src_load_10 = load i16* %src_addr_10, align 2" [dct_hls/dct.cpp:8]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 98 [1/2] (0.59ns)   --->   "%src_load_11 = load i16* %src_addr_11, align 2" [dct_hls/dct.cpp:8]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 99 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp5 = add i16 %src_load_9, %src_load_8" [dct_hls/dct.cpp:8]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 100 [1/1] (0.78ns)   --->   "%tmp6 = add i16 %src_load_10, %src_load_11" [dct_hls/dct.cpp:8]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 101 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_54 = add i16 %tmp6, %tmp5" [dct_hls/dct.cpp:8]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 102 [1/1] (0.59ns)   --->   "store i16 %tmp_54, i16* %dst_addr_2, align 2" [dct_hls/dct.cpp:8]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 103 [2/2] (0.59ns)   --->   "%src_load_12 = load i16* %src_addr_12, align 2" [dct_hls/dct.cpp:9]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 104 [2/2] (0.59ns)   --->   "%src_load_13 = load i16* %src_addr_13, align 2" [dct_hls/dct.cpp:9]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 105 [1/1] (0.00ns) (grouped into LUT with out node tmp_62)   --->   "%tmp_94 = shl i16 %src_load_8, 1" [dct_hls/dct.cpp:13]
+ST_7 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_98 = shl i16 %src_load_11, 1" [dct_hls/dct.cpp:13]
+ST_7 : Operation 107 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_62 = add i16 %src_load_9, %tmp_94" [dct_hls/dct.cpp:13]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 108 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_63 = sub i16 %tmp_62, %src_load_10" [dct_hls/dct.cpp:13]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 109 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_64 = sub i16 %tmp_63, %tmp_98" [dct_hls/dct.cpp:13]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 110 [1/1] (0.59ns)   --->   "store i16 %tmp_64, i16* %dst_addr_6, align 2" [dct_hls/dct.cpp:13]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_7 : Operation 111 [1/1] (0.78ns)   --->   "%tmp_74 = sub i16 %src_load_8, %src_load_9" [dct_hls/dct.cpp:18]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 112 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_75 = sub i16 %tmp_74, %src_load_10" [dct_hls/dct.cpp:18]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 113 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_76 = add i16 %src_load_11, %tmp_75" [dct_hls/dct.cpp:18]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node tmp_86)   --->   "%tmp_111 = shl i16 %src_load_9, 1" [dct_hls/dct.cpp:23]
+ST_7 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_112 = shl i16 %src_load_10, 1" [dct_hls/dct.cpp:23]
+ST_7 : Operation 116 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_86 = sub i16 %src_load_8, %tmp_111" [dct_hls/dct.cpp:23]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 117 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_87 = add i16 %tmp_86, %tmp_112" [dct_hls/dct.cpp:23]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 118 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_90 = sub i16 %tmp_87, %src_load_11" [dct_hls/dct.cpp:23]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+ <State 8> : 0.59ns
+ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%src_addr_14 = getelementptr [16 x i16]* %src, i64 0, i64 11" [dct_hls/dct.cpp:9]
+ST_8 : Operation 120 [1/1] (0.00ns)   --->   "%src_addr_15 = getelementptr [16 x i16]* %src, i64 0, i64 15" [dct_hls/dct.cpp:9]
+ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%dst_addr_10 = getelementptr [16 x i16]* %dst, i64 0, i64 10" [dct_hls/dct.cpp:18]
+ST_8 : Operation 122 [1/1] (0.00ns)   --->   "%dst_addr_14 = getelementptr [16 x i16]* %dst, i64 0, i64 11" [dct_hls/dct.cpp:23]
+ST_8 : Operation 123 [1/2] (0.59ns)   --->   "%src_load_12 = load i16* %src_addr_12, align 2" [dct_hls/dct.cpp:9]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 124 [1/2] (0.59ns)   --->   "%src_load_13 = load i16* %src_addr_13, align 2" [dct_hls/dct.cpp:9]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 125 [2/2] (0.59ns)   --->   "%src_load_14 = load i16* %src_addr_14, align 2" [dct_hls/dct.cpp:9]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 126 [2/2] (0.59ns)   --->   "%src_load_15 = load i16* %src_addr_15, align 2" [dct_hls/dct.cpp:9]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 127 [1/1] (0.59ns)   --->   "store i16 %tmp_76, i16* %dst_addr_10, align 2" [dct_hls/dct.cpp:18]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_8 : Operation 128 [1/1] (0.59ns)   --->   "store i16 %tmp_90, i16* %dst_addr_14, align 2" [dct_hls/dct.cpp:23]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 9> : 2.65ns
+ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%dst_addr_3 = getelementptr [16 x i16]* %dst, i64 0, i64 12" [dct_hls/dct.cpp:9]
+ST_9 : Operation 130 [1/1] (0.00ns)   --->   "%dst_addr_7 = getelementptr [16 x i16]* %dst, i64 0, i64 13" [dct_hls/dct.cpp:14]
+ST_9 : Operation 131 [1/2] (0.59ns)   --->   "%src_load_14 = load i16* %src_addr_14, align 2" [dct_hls/dct.cpp:9]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_9 : Operation 132 [1/2] (0.59ns)   --->   "%src_load_15 = load i16* %src_addr_15, align 2" [dct_hls/dct.cpp:9]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_9 : Operation 133 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp7 = add i16 %src_load_13, %src_load_12" [dct_hls/dct.cpp:9]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 134 [1/1] (0.78ns)   --->   "%tmp8 = add i16 %src_load_14, %src_load_15" [dct_hls/dct.cpp:9]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 135 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_55 = add i16 %tmp8, %tmp7" [dct_hls/dct.cpp:9]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 136 [1/1] (0.59ns)   --->   "store i16 %tmp_55, i16* %dst_addr_3, align 2" [dct_hls/dct.cpp:9]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_9 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node tmp_65)   --->   "%tmp_99 = shl i16 %src_load_12, 1" [dct_hls/dct.cpp:14]
+ST_9 : Operation 138 [1/1] (0.00ns)   --->   "%tmp_103 = shl i16 %src_load_15, 1" [dct_hls/dct.cpp:14]
+ST_9 : Operation 139 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_65 = add i16 %src_load_13, %tmp_99" [dct_hls/dct.cpp:14]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 140 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_66 = sub i16 %tmp_65, %src_load_14" [dct_hls/dct.cpp:14]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 141 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_67 = sub i16 %tmp_66, %tmp_103" [dct_hls/dct.cpp:14]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 142 [1/1] (0.59ns)   --->   "store i16 %tmp_67, i16* %dst_addr_7, align 2" [dct_hls/dct.cpp:14]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_9 : Operation 143 [1/1] (0.78ns)   --->   "%tmp_77 = sub i16 %src_load_12, %src_load_13" [dct_hls/dct.cpp:19]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 144 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_78 = sub i16 %tmp_77, %src_load_14" [dct_hls/dct.cpp:19]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 145 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_79 = add i16 %src_load_15, %tmp_78" [dct_hls/dct.cpp:19]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node tmp_91)   --->   "%tmp_113 = shl i16 %src_load_13, 1" [dct_hls/dct.cpp:24]
+ST_9 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_114 = shl i16 %src_load_14, 1" [dct_hls/dct.cpp:24]
+ST_9 : Operation 148 [1/1] (0.78ns) (out node of the LUT)   --->   "%tmp_91 = sub i16 %src_load_12, %tmp_113" [dct_hls/dct.cpp:24]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 149 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp_92 = add i16 %tmp_91, %tmp_114" [dct_hls/dct.cpp:24]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 150 [1/1] (0.67ns) (root node of TernaryAdder)   --->   "%tmp_95 = sub i16 %tmp_92, %src_load_15" [dct_hls/dct.cpp:24]   --->   Core 80 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.33> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+ <State 10> : 0.59ns
+ST_10 : Operation 151 [1/1] (0.00ns)   --->   "%dst_addr_11 = getelementptr [16 x i16]* %dst, i64 0, i64 14" [dct_hls/dct.cpp:19]
+ST_10 : Operation 152 [1/1] (0.00ns)   --->   "%dst_addr_15 = getelementptr [16 x i16]* %dst, i64 0, i64 15" [dct_hls/dct.cpp:24]
+ST_10 : Operation 153 [1/1] (0.59ns)   --->   "store i16 %tmp_79, i16* %dst_addr_11, align 2" [dct_hls/dct.cpp:19]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_10 : Operation 154 [1/1] (0.59ns)   --->   "store i16 %tmp_95, i16* %dst_addr_15, align 2" [dct_hls/dct.cpp:24]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_10 : Operation 155 [1/1] (0.00ns)   --->   "ret void" [dct_hls/dct.cpp:25]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('src_addr', dct_hls/dct.cpp:6) [3]  (0 ns)
+	'load' operation ('src_load', dct_hls/dct.cpp:6) on array 'src' [35]  (0.594 ns)
+
+ <State 2>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('src_addr_2', dct_hls/dct.cpp:6) [5]  (0 ns)
+	'load' operation ('src_load_2', dct_hls/dct.cpp:6) on array 'src' [37]  (0.594 ns)
+
+ <State 3>: 2.65ns
+The critical path consists of the following:
+	'load' operation ('src_load_2', dct_hls/dct.cpp:6) on array 'src' [37]  (0.594 ns)
+	'add' operation ('tmp2', dct_hls/dct.cpp:6) [40]  (0.785 ns)
+	'add' operation ('tmp_s', dct_hls/dct.cpp:6) [41]  (0.675 ns)
+	'store' operation (dct_hls/dct.cpp:6) of variable 'tmp_s', dct_hls/dct.cpp:6 on array 'dst' [42]  (0.594 ns)
+
+ <State 4>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('src_addr_6', dct_hls/dct.cpp:7) [9]  (0 ns)
+	'load' operation ('src_load_6', dct_hls/dct.cpp:7) on array 'src' [45]  (0.594 ns)
+
+ <State 5>: 2.65ns
+The critical path consists of the following:
+	'load' operation ('src_load_6', dct_hls/dct.cpp:7) on array 'src' [45]  (0.594 ns)
+	'add' operation ('tmp4', dct_hls/dct.cpp:7) [48]  (0.785 ns)
+	'add' operation ('tmp_53', dct_hls/dct.cpp:7) [49]  (0.675 ns)
+	'store' operation (dct_hls/dct.cpp:7) of variable 'tmp_53', dct_hls/dct.cpp:7 on array 'dst' [50]  (0.594 ns)
+
+ <State 6>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('src_addr_10', dct_hls/dct.cpp:8) [13]  (0 ns)
+	'load' operation ('src_load_10', dct_hls/dct.cpp:8) on array 'src' [53]  (0.594 ns)
+
+ <State 7>: 2.65ns
+The critical path consists of the following:
+	'load' operation ('src_load_10', dct_hls/dct.cpp:8) on array 'src' [53]  (0.594 ns)
+	'add' operation ('tmp6', dct_hls/dct.cpp:8) [56]  (0.785 ns)
+	'add' operation ('tmp_54', dct_hls/dct.cpp:8) [57]  (0.675 ns)
+	'store' operation (dct_hls/dct.cpp:8) of variable 'tmp_54', dct_hls/dct.cpp:8 on array 'dst' [58]  (0.594 ns)
+
+ <State 8>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('src_addr_14', dct_hls/dct.cpp:9) [17]  (0 ns)
+	'load' operation ('src_load_14', dct_hls/dct.cpp:9) on array 'src' [61]  (0.594 ns)
+
+ <State 9>: 2.65ns
+The critical path consists of the following:
+	'load' operation ('src_load_14', dct_hls/dct.cpp:9) on array 'src' [61]  (0.594 ns)
+	'add' operation ('tmp8', dct_hls/dct.cpp:9) [64]  (0.785 ns)
+	'add' operation ('tmp_55', dct_hls/dct.cpp:9) [65]  (0.675 ns)
+	'store' operation (dct_hls/dct.cpp:9) of variable 'tmp_55', dct_hls/dct.cpp:9 on array 'dst' [66]  (0.594 ns)
+
+ <State 10>: 0.594ns
+The critical path consists of the following:
+	'getelementptr' operation ('dst_addr_11', dct_hls/dct.cpp:19) [30]  (0 ns)
+	'store' operation (dct_hls/dct.cpp:19) of variable 'tmp_79', dct_hls/dct.cpp:19 on array 'dst' [106]  (0.594 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

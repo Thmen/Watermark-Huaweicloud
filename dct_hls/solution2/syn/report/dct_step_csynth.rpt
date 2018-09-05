@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vivado HLS Report for 'dct_step'
+================================================================
+* Date:           Tue Jul 17 22:00:44 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution2
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      1.46|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+---------+---------+-----+
+|       Name      | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++-----------------+---------+-------+---------+---------+-----+
+|DSP              |        -|      -|        -|        -|    -|
+|Expression       |        -|      -|        0|      976|    -|
+|FIFO             |        -|      -|        -|        -|    -|
+|Instance         |        -|      -|        -|        -|    -|
+|Memory           |        -|      -|        -|        -|    -|
+|Multiplexer      |        -|      -|        -|        -|    -|
+|Register         |        -|      -|        -|        -|    -|
++-----------------+---------+-------+---------+---------+-----+
+|Total            |        0|      0|        0|      976|    0|
++-----------------+---------+-------+---------+---------+-----+
+|Available        |     4320|   6840|  2364480|  1182240|  960|
++-----------------+---------+-------+---------+---------+-----+
+|Utilization (%)  |        0|      0|        0|    ~0   |    0|
++-----------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------+----------+-------+---+----+------------+------------+
+    |         Variable Name        | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------+----------+-------+---+----+------------+------------+
+    |dst_0_0_write_assi_fu_146_p2  |     +    |      0|  0|  19|          16|          16|
+    |dst_0_2_write_assi_fu_338_p2  |     +    |      0|  0|  19|          16|          16|
+    |dst_1_0_write_assi_fu_164_p2  |     +    |      0|  0|  19|          16|          16|
+    |dst_1_2_write_assi_fu_356_p2  |     +    |      0|  0|  19|          16|          16|
+    |dst_2_0_write_assi_fu_182_p2  |     +    |      0|  0|  19|          16|          16|
+    |dst_2_2_write_assi_fu_374_p2  |     +    |      0|  0|  19|          16|          16|
+    |dst_3_0_write_assi_fu_200_p2  |     +    |      0|  0|  19|          16|          16|
+    |dst_3_2_write_assi_fu_392_p2  |     +    |      0|  0|  19|          16|          16|
+    |tmp1_fu_134_p2                |     +    |      0|  0|  19|          16|          16|
+    |tmp2_fu_140_p2                |     +    |      0|  0|  23|          16|          16|
+    |tmp3_fu_152_p2                |     +    |      0|  0|  19|          16|          16|
+    |tmp4_fu_158_p2                |     +    |      0|  0|  23|          16|          16|
+    |tmp5_fu_170_p2                |     +    |      0|  0|  19|          16|          16|
+    |tmp6_fu_176_p2                |     +    |      0|  0|  23|          16|          16|
+    |tmp7_fu_188_p2                |     +    |      0|  0|  19|          16|          16|
+    |tmp8_fu_194_p2                |     +    |      0|  0|  23|          16|          16|
+    |tmp_28_fu_218_p2              |     +    |      0|  0|  23|          16|          16|
+    |tmp_33_fu_278_p2              |     +    |      0|  0|  23|          16|          16|
+    |tmp_35_fu_308_p2              |     +    |      0|  0|  23|          16|          16|
+    |tmp_46_fu_416_p2              |     +    |      0|  0|  19|          16|          16|
+    |tmp_48_fu_446_p2              |     +    |      0|  0|  19|          16|          16|
+    |tmp_50_fu_476_p2              |     +    |      0|  0|  19|          16|          16|
+    |tmp_52_fu_506_p2              |     +    |      0|  0|  19|          16|          16|
+    |tmp_s_fu_248_p2               |     +    |      0|  0|  23|          16|          16|
+    |dst_0_1_write_assi_fu_230_p2  |     -    |      0|  0|  19|          16|          16|
+    |dst_0_3_write_assi_fu_422_p2  |     -    |      0|  0|  19|          16|          16|
+    |dst_1_1_write_assi_fu_260_p2  |     -    |      0|  0|  19|          16|          16|
+    |dst_1_3_write_assi_fu_452_p2  |     -    |      0|  0|  19|          16|          16|
+    |dst_2_1_write_assi_fu_290_p2  |     -    |      0|  0|  19|          16|          16|
+    |dst_2_3_write_assi_fu_482_p2  |     -    |      0|  0|  19|          16|          16|
+    |dst_3_1_write_assi_fu_320_p2  |     -    |      0|  0|  19|          16|          16|
+    |dst_3_3_write_assi_fu_512_p2  |     -    |      0|  0|  19|          16|          16|
+    |tmp_29_fu_224_p2              |     -    |      0|  0|  19|          16|          16|
+    |tmp_32_fu_254_p2              |     -    |      0|  0|  19|          16|          16|
+    |tmp_34_fu_284_p2              |     -    |      0|  0|  19|          16|          16|
+    |tmp_36_fu_314_p2              |     -    |      0|  0|  19|          16|          16|
+    |tmp_37_fu_326_p2              |     -    |      0|  0|  23|          16|          16|
+    |tmp_38_fu_332_p2              |     -    |      0|  0|  19|          16|          16|
+    |tmp_39_fu_344_p2              |     -    |      0|  0|  23|          16|          16|
+    |tmp_40_fu_350_p2              |     -    |      0|  0|  19|          16|          16|
+    |tmp_41_fu_362_p2              |     -    |      0|  0|  23|          16|          16|
+    |tmp_42_fu_368_p2              |     -    |      0|  0|  19|          16|          16|
+    |tmp_43_fu_380_p2              |     -    |      0|  0|  23|          16|          16|
+    |tmp_44_fu_386_p2              |     -    |      0|  0|  19|          16|          16|
+    |tmp_45_fu_410_p2              |     -    |      0|  0|  23|          16|          16|
+    |tmp_47_fu_440_p2              |     -    |      0|  0|  23|          16|          16|
+    |tmp_49_fu_470_p2              |     -    |      0|  0|  23|          16|          16|
+    |tmp_51_fu_500_p2              |     -    |      0|  0|  23|          16|          16|
+    +------------------------------+----------+-------+---+----+------------+------------+
+    |Total                         |          |      0|  0| 976|         768|         768|
+    +------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------+-----+-----+------------+--------------+--------------+
+|   RTL Ports  | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------+-----+-----+------------+--------------+--------------+
+|ap_ready      | out |    1| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_0   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_1   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_2   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_3   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_4   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_5   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_6   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_7   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_8   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_9   | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_10  | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_11  | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_12  | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_13  | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_14  | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|ap_return_15  | out |   16| ap_ctrl_hs |   dct_step   | return value |
+|src_0_0_read  |  in |   16|   ap_none  | src_0_0_read |    scalar    |
+|src_0_1_read  |  in |   16|   ap_none  | src_0_1_read |    scalar    |
+|src_0_2_read  |  in |   16|   ap_none  | src_0_2_read |    scalar    |
+|src_0_3_read  |  in |   16|   ap_none  | src_0_3_read |    scalar    |
+|src_1_0_read  |  in |   16|   ap_none  | src_1_0_read |    scalar    |
+|src_1_1_read  |  in |   16|   ap_none  | src_1_1_read |    scalar    |
+|src_1_2_read  |  in |   16|   ap_none  | src_1_2_read |    scalar    |
+|src_1_3_read  |  in |   16|   ap_none  | src_1_3_read |    scalar    |
+|src_2_0_read  |  in |   16|   ap_none  | src_2_0_read |    scalar    |
+|src_2_1_read  |  in |   16|   ap_none  | src_2_1_read |    scalar    |
+|src_2_2_read  |  in |   16|   ap_none  | src_2_2_read |    scalar    |
+|src_2_3_read  |  in |   16|   ap_none  | src_2_3_read |    scalar    |
+|src_3_0_read  |  in |   16|   ap_none  | src_3_0_read |    scalar    |
+|src_3_1_read  |  in |   16|   ap_none  | src_3_1_read |    scalar    |
+|src_3_2_read  |  in |   16|   ap_none  | src_3_2_read |    scalar    |
+|src_3_3_read  |  in |   16|   ap_none  | src_3_3_read |    scalar    |
++--------------+-----+-----+------------+--------------+--------------+
+

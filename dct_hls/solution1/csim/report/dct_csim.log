@@ -1,0 +1,25 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../dct.cpp in debug mode
+   Generating csim.exe
+Files out.dat and out_golden.dat differ
+ Din Dout 
+  0   24
+  1   -28
+  2   0
+  3   -4
+  4   28
+  5   -28
+  6   0
+  7   -4
+  8   32
+  9   -28
+  10   0
+  11   -4
+  12   36
+  13   -28
+  14   0
+  15   -4
+Test failed  !!!
+CRITICAL WARNING: [SIM 100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 3] *************** CSIM finish ***************

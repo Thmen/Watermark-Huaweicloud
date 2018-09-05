@@ -1,0 +1,228 @@
+
+
+================================================================
+== Vivado HLS Report for 'add_watermark'
+================================================================
+* Date:           Tue Jul 17 22:00:47 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution2
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      7.25|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   24|   24|   24|   24|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------+--------------+-----+-----+-----+-----+----------+
+        |                             |              |  Latency  |  Interval | Pipeline |
+        |           Instance          |    Module    | min | max | min | max |   Type   |
+        +-----------------------------+--------------+-----+-----+-----+-----+----------+
+        |call_ret_integer_idct_fu_84  |integer_idct  |    0|    0|    0|    0|   none   |
+        |call_ret2_i_dct_step_fu_104  |dct_step      |    0|    0|    0|    0|   none   |
+        |call_ret_i_dct_step_fu_124   |dct_step      |    0|    0|    0|    0|   none   |
+        |grp_read_data_fu_144         |read_data     |    8|    8|    8|    8| function |
+        |grp_write_data_fu_150        |write_data    |    7|    7|    8|    8| function |
+        +-----------------------------+--------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+---------+---------+-----+
+|       Name      | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++-----------------+---------+-------+---------+---------+-----+
+|DSP              |        -|     16|        -|        -|    -|
+|Expression       |        -|      -|        -|        -|    -|
+|FIFO             |        -|      -|        -|        -|    -|
+|Instance         |        -|      -|      242|     6340|    -|
+|Memory           |        1|      -|        0|        0|    -|
+|Multiplexer      |        -|      -|        -|      206|    -|
+|Register         |        -|      -|      437|        -|    -|
++-----------------+---------+-------+---------+---------+-----+
+|Total            |        1|     16|      679|     6546|    0|
++-----------------+---------+-------+---------+---------+-----+
+|Available        |     4320|   6840|  2364480|  1182240|  960|
++-----------------+---------+-------+---------+---------+-----+
+|Utilization (%)  |    ~0   |   ~0  |    ~0   |    ~0   |    0|
++-----------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+--------------+---------+-------+-----+------+
+    |           Instance          |    Module    | BRAM_18K| DSP48E|  FF |  LUT |
+    +-----------------------------+--------------+---------+-------+-----+------+
+    |call_ret2_i_dct_step_fu_104  |dct_step      |        0|      0|    0|   976|
+    |call_ret_i_dct_step_fu_124   |dct_step      |        0|      0|    0|   976|
+    |call_ret_integer_idct_fu_84  |integer_idct  |        0|      0|    0|  4000|
+    |grp_read_data_fu_144         |read_data     |        0|      0|  122|   168|
+    |grp_write_data_fu_150        |write_data    |        0|      0|  120|   220|
+    +-----------------------------+--------------+---------+-------+-----+------+
+    |Total                        |              |        0|      0|  242|  6340|
+    +-----------------------------+--------------+---------+-------+-----+------+
+
+    * DSP48: 
+    +--------------------------+----------------------+-----------+
+    |         Instance         |        Module        | Expression|
+    +--------------------------+----------------------+-----------+
+    |add_watermark_mulcud_U67  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U68  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U69  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U70  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U71  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U72  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U73  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U74  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U75  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U76  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U77  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U78  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U79  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U80  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U81  |add_watermark_mulcud  |  i0 * i1  |
+    |add_watermark_mulcud_U82  |add_watermark_mulcud  |  i0 * i1  |
+    +--------------------------+----------------------+-----------+
+
+    * Memory: 
+    +-------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |       Memory      |        Module        | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |qft_coeff_table_U  |add_watermark_qftbkb  |        1|  0|   0|    16|    6|     1|           96|
+    +-------------------+----------------------+---------+---+----+------+-----+------+-------------+
+    |Total              |                      |        1|  0|   0|    16|    6|     1|           96|
+    +-------------------+----------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +--------------------------+-----+-----------+-----+-----------+
+    |           Name           | LUT | Input Size| Bits| Total Bits|
+    +--------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                 |  121|         26|    1|         26|
+    |qft_coeff_table_address0  |   85|         17|    4|         68|
+    +--------------------------+-----+-----------+-----+-----------+
+    |Total                     |  206|         43|    5|         94|
+    +--------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+----+----+-----+-----------+
+    |                  Name                 | FF | LUT| Bits| Const Bits|
+    +---------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                              |  25|   0|   25|          0|
+    |ap_reg_grp_read_data_fu_144_ap_start   |   1|   0|    1|          0|
+    |ap_reg_grp_write_data_fu_150_ap_start  |   1|   0|    1|          0|
+    |buf_temp_qft_0_0_V_reg_760             |  20|   0|   20|          0|
+    |buf_temp_qft_0_1_V_reg_765             |  20|   0|   20|          0|
+    |buf_temp_qft_0_2_V_reg_770             |  20|   0|   20|          0|
+    |buf_temp_qft_0_3_V_reg_775             |  20|   0|   20|          0|
+    |buf_temp_qft_1_0_V_reg_780             |  20|   0|   20|          0|
+    |buf_temp_qft_1_1_V_reg_785             |  20|   0|   20|          0|
+    |buf_temp_qft_1_2_V_reg_790             |  20|   0|   20|          0|
+    |buf_temp_qft_1_3_V_reg_795             |  20|   0|   20|          0|
+    |buf_temp_qft_2_0_V_reg_800             |  20|   0|   20|          0|
+    |buf_temp_qft_2_1_V_reg_805             |  20|   0|   20|          0|
+    |buf_temp_qft_2_2_V_reg_810             |  20|   0|   20|          0|
+    |buf_temp_qft_2_3_V_reg_815             |  20|   0|   20|          0|
+    |buf_temp_qft_3_0_V_reg_820             |  20|   0|   20|          0|
+    |buf_temp_qft_3_1_V_reg_825             |  20|   0|   20|          0|
+    |buf_temp_qft_3_2_V_reg_830             |  20|   0|   20|          0|
+    |buf_temp_qft_3_3_V_reg_835             |  20|   0|   20|          0|
+    |qft_coeff_table_load_10_reg_735        |   6|   0|    6|          0|
+    |qft_coeff_table_load_11_reg_740        |   6|   0|    6|          0|
+    |qft_coeff_table_load_12_reg_745        |   6|   0|    6|          0|
+    |qft_coeff_table_load_13_reg_750        |   6|   0|    6|          0|
+    |qft_coeff_table_load_14_reg_755        |   6|   0|    6|          0|
+    |qft_coeff_table_load_1_reg_690         |   6|   0|    6|          0|
+    |qft_coeff_table_load_2_reg_695         |   6|   0|    6|          0|
+    |qft_coeff_table_load_3_reg_700         |   6|   0|    6|          0|
+    |qft_coeff_table_load_4_reg_705         |   6|   0|    6|          0|
+    |qft_coeff_table_load_5_reg_710         |   6|   0|    6|          0|
+    |qft_coeff_table_load_6_reg_715         |   6|   0|    6|          0|
+    |qft_coeff_table_load_7_reg_720         |   6|   0|    6|          0|
+    |qft_coeff_table_load_8_reg_725         |   6|   0|    6|          0|
+    |qft_coeff_table_load_9_reg_730         |   6|   0|    6|          0|
+    |qft_coeff_table_load_reg_685           |   6|   0|    6|          0|
+    +---------------------------------------+----+----+-----+-----------+
+    |Total                                  | 437|   0|  437|          0|
+    +---------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+---------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  | Source Object |    C Type    |
++------------------+-----+-----+------------+---------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs | add_watermark | return value |
+|ap_rst            |  in |    1| ap_ctrl_hs | add_watermark | return value |
+|ap_start          |  in |    1| ap_ctrl_hs | add_watermark | return value |
+|ap_done           | out |    1| ap_ctrl_hs | add_watermark | return value |
+|ap_idle           | out |    1| ap_ctrl_hs | add_watermark | return value |
+|ap_ready          | out |    1| ap_ctrl_hs | add_watermark | return value |
+|indata_address0   | out |    4|  ap_memory |     indata    |     array    |
+|indata_ce0        | out |    1|  ap_memory |     indata    |     array    |
+|indata_q0         |  in |    8|  ap_memory |     indata    |     array    |
+|indata_address1   | out |    4|  ap_memory |     indata    |     array    |
+|indata_ce1        | out |    1|  ap_memory |     indata    |     array    |
+|indata_q1         |  in |    8|  ap_memory |     indata    |     array    |
+|outdata_address0  | out |    4|  ap_memory |    outdata    |     array    |
+|outdata_ce0       | out |    1|  ap_memory |    outdata    |     array    |
+|outdata_we0       | out |    1|  ap_memory |    outdata    |     array    |
+|outdata_d0        | out |    8|  ap_memory |    outdata    |     array    |
+|outdata_address1  | out |    4|  ap_memory |    outdata    |     array    |
+|outdata_ce1       | out |    1|  ap_memory |    outdata    |     array    |
+|outdata_we1       | out |    1|  ap_memory |    outdata    |     array    |
+|outdata_d1        | out |    8|  ap_memory |    outdata    |     array    |
+|temp_address0     | out |    4|  ap_memory |      temp     |     array    |
+|temp_ce0          | out |    1|  ap_memory |      temp     |     array    |
+|temp_we0          | out |    1|  ap_memory |      temp     |     array    |
+|temp_d0           | out |   16|  ap_memory |      temp     |     array    |
+|temp_q0           |  in |   16|  ap_memory |      temp     |     array    |
+|temp_address1     | out |    4|  ap_memory |      temp     |     array    |
+|temp_ce1          | out |    1|  ap_memory |      temp     |     array    |
+|temp_we1          | out |    1|  ap_memory |      temp     |     array    |
+|temp_d1           | out |   16|  ap_memory |      temp     |     array    |
+|temp_q1           |  in |   16|  ap_memory |      temp     |     array    |
+|temp1_address0    | out |    4|  ap_memory |     temp1     |     array    |
+|temp1_ce0         | out |    1|  ap_memory |     temp1     |     array    |
+|temp1_we0         | out |    1|  ap_memory |     temp1     |     array    |
+|temp1_d0          | out |   16|  ap_memory |     temp1     |     array    |
+|temp1_q0          |  in |   16|  ap_memory |     temp1     |     array    |
+|temp1_address1    | out |    4|  ap_memory |     temp1     |     array    |
+|temp1_ce1         | out |    1|  ap_memory |     temp1     |     array    |
+|temp1_we1         | out |    1|  ap_memory |     temp1     |     array    |
+|temp1_d1          | out |   16|  ap_memory |     temp1     |     array    |
+|temp1_q1          |  in |   16|  ap_memory |     temp1     |     array    |
++------------------+-----+-----+------------+---------------+--------------+
+

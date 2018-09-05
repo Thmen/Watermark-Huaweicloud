@@ -1,0 +1,261 @@
+
+
+================================================================
+== Vivado HLS Report for 'add_watermark'
+================================================================
+* Date:           Fri Jul 20 11:59:12 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution4
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.64|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.46ns
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%mark_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %mark)"
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%indata_15_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_15_read)"
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%indata_14_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_14_read)"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%indata_13_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_13_read)"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%indata_12_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_12_read)"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indata_11_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_11_read)"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%indata_10_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_10_read)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%indata_9_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_9_read)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%indata_8_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_8_read)"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%indata_7_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_7_read)"
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%indata_6_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_6_read)"
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indata_5_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_5_read)"
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%indata_4_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_4_read)"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%indata_3_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_3_read)"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%indata_2_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_2_read)"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%indata_1_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_1_read)"
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%indata_0_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %indata_0_read)"
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%call_ret3 = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @read_data(i8 %indata_0_read_1, i8 %indata_1_read_1, i8 %indata_2_read_1, i8 %indata_3_read_1, i8 %indata_4_read_1, i8 %indata_5_read_1, i8 %indata_6_read_1, i8 %indata_7_read_1, i8 %indata_8_read_1, i8 %indata_9_read_1, i8 %indata_10_read_1, i8 %indata_11_read_1, i8 %indata_12_read_1, i8 %indata_13_read_1, i8 %indata_14_read_1, i8 %indata_15_read_1)" [dct_hls/dct.cpp:125]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%buf_2d_in_0_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 0" [dct_hls/dct.cpp:125]
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%buf_2d_in_0_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 1" [dct_hls/dct.cpp:125]
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%buf_2d_in_0_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 2" [dct_hls/dct.cpp:125]
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%buf_2d_in_0_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 3" [dct_hls/dct.cpp:125]
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%buf_2d_in_1_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 4" [dct_hls/dct.cpp:125]
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%buf_2d_in_1_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 5" [dct_hls/dct.cpp:125]
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%buf_2d_in_1_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 6" [dct_hls/dct.cpp:125]
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%buf_2d_in_1_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 7" [dct_hls/dct.cpp:125]
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%buf_2d_in_2_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 8" [dct_hls/dct.cpp:125]
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%buf_2d_in_2_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 9" [dct_hls/dct.cpp:125]
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%buf_2d_in_2_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 10" [dct_hls/dct.cpp:125]
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%buf_2d_in_2_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 11" [dct_hls/dct.cpp:125]
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%buf_2d_in_3_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 12" [dct_hls/dct.cpp:125]
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%buf_2d_in_3_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 13" [dct_hls/dct.cpp:125]
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%buf_2d_in_3_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 14" [dct_hls/dct.cpp:125]
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%buf_2d_in_3_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret3, 15" [dct_hls/dct.cpp:125]
+ST_1 : Operation 37 [1/1] (1.46ns)   --->   "%call_ret2_i = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @dct_step(i16 %buf_2d_in_0_0, i16 %buf_2d_in_0_1, i16 %buf_2d_in_0_2, i16 %buf_2d_in_0_3, i16 %buf_2d_in_1_0, i16 %buf_2d_in_1_1, i16 %buf_2d_in_1_2, i16 %buf_2d_in_1_3, i16 %buf_2d_in_2_0, i16 %buf_2d_in_2_1, i16 %buf_2d_in_2_2, i16 %buf_2d_in_2_3, i16 %buf_2d_in_3_0, i16 %buf_2d_in_3_1, i16 %buf_2d_in_3_2, i16 %buf_2d_in_3_3)" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%temp_0_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 0" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%temp_0_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 1" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%temp_0_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 2" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%temp_0_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 3" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%temp_1_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 4" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%temp_1_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 5" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%temp_1_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 6" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%temp_1_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 7" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%temp_2_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 8" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%temp_2_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 9" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%temp_2_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 10" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%temp_2_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 11" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%temp_3_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 12" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%temp_3_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 13" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%temp_3_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 14" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%temp_3_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret2_i, 15" [dct_hls/dct.cpp:68->dct_hls/dct.cpp:129]
+ST_1 : Operation 54 [1/1] (0.58ns)   --->   "%tmp = icmp eq i8 %mark_read, 0" [dct_hls/dct.cpp:134]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+ <State 2> : 8.64ns
+ST_2 : Operation 55 [1/1] (1.46ns)   --->   "%call_ret_i = call fastcc { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } @dct_step(i16 %temp_0_0, i16 %temp_0_1, i16 %temp_0_2, i16 %temp_0_3, i16 %temp_1_0, i16 %temp_1_1, i16 %temp_1_2, i16 %temp_1_3, i16 %temp_2_0, i16 %temp_2_1, i16 %temp_2_2, i16 %temp_2_3, i16 %temp_3_0, i16 %temp_3_1, i16 %temp_3_2, i16 %temp_3_3)" [dct_hls/dct.cpp:69->dct_hls/dct.cpp:129]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%buf_temp_dct_0_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 0" [dct_hls/dct.cpp:129]
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%buf_temp_dct_0_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 1" [dct_hls/dct.cpp:129]
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%buf_temp_dct_0_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 2" [dct_hls/dct.cpp:129]
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%buf_temp_dct_0_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 3" [dct_hls/dct.cpp:129]
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%buf_temp_dct_1_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 4" [dct_hls/dct.cpp:129]
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%buf_temp_dct_1_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 5" [dct_hls/dct.cpp:129]
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%buf_temp_dct_1_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 6" [dct_hls/dct.cpp:129]
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%buf_temp_dct_1_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 7" [dct_hls/dct.cpp:129]
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%buf_temp_dct_2_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 8" [dct_hls/dct.cpp:129]
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%buf_temp_dct_2_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 9" [dct_hls/dct.cpp:129]
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%buf_temp_dct_2_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 10" [dct_hls/dct.cpp:129]
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%buf_temp_dct_2_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 11" [dct_hls/dct.cpp:129]
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%buf_temp_dct_3_0 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 12" [dct_hls/dct.cpp:129]
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%buf_temp_dct_3_1 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 13" [dct_hls/dct.cpp:129]
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%buf_temp_dct_3_2 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 14" [dct_hls/dct.cpp:129]
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%buf_temp_dct_3_3 = extractvalue { i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16, i16 } %call_ret_i, 15" [dct_hls/dct.cpp:129]
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_3_0_i = sext i16 %buf_temp_dct_0_0 to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 73 [1/1] (2.53ns)   --->   "%buf_temp_qft_0_0_V = mul i20 %tmp_3_0_i, 25" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%p_shl1_i = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_0_1, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%p_shl2_i = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %buf_temp_dct_0_1, i2 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%p_shl2_i_cast = sext i18 %p_shl2_i to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 77 [1/1] (0.80ns)   --->   "%buf_temp_qft_0_1_V = add i20 %p_shl1_i, %p_shl2_i_cast" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_3_0_2_i = sext i16 %buf_temp_dct_0_2 to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 79 [1/1] (2.53ns)   --->   "%buf_temp_qft_0_2_V = mul i20 %tmp_3_0_2_i, 25" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%p_shl3_i = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_0_3, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%p_shl4_i = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %buf_temp_dct_0_3, i2 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%p_shl4_i_cast = sext i18 %p_shl4_i to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 83 [1/1] (0.80ns)   --->   "%buf_temp_qft_0_3_V = add i20 %p_shl3_i, %p_shl4_i_cast" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%p_shl5_i = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_1_0, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%p_shl6_i = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %buf_temp_dct_1_0, i2 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%p_shl6_i_cast = sext i18 %p_shl6_i to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 87 [1/1] (0.80ns)   --->   "%buf_temp_qft_1_0_V = add i20 %p_shl5_i, %p_shl6_i_cast" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%buf_temp_qft_1_1_V = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_1_1, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%p_shl7_i = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_1_2, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%p_shl8_i = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %buf_temp_dct_1_2, i2 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%p_shl8_i_cast = sext i18 %p_shl8_i to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 92 [1/1] (0.80ns)   --->   "%buf_temp_qft_1_2_V = add i20 %p_shl7_i, %p_shl8_i_cast" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%buf_temp_qft_1_3_V = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_1_3, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_3_2_i = sext i16 %buf_temp_dct_2_0 to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 95 [1/1] (2.53ns)   --->   "%buf_temp_qft_2_0_V = mul i20 %tmp_3_2_i, 25" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%p_shl9_i = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_2_1, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%p_shl10_i = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %buf_temp_dct_2_1, i2 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%p_shl10_i_cast = sext i18 %p_shl10_i to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 99 [1/1] (0.80ns)   --->   "%buf_temp_qft_2_1_V = add i20 %p_shl9_i, %p_shl10_i_cast" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%tmp_3_2_2_i = sext i16 %buf_temp_dct_2_2 to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 101 [1/1] (2.53ns)   --->   "%buf_temp_qft_2_2_V = mul i20 %tmp_3_2_2_i, 25" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%p_shl11_i = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_2_3, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%p_shl12_i = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %buf_temp_dct_2_3, i2 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%p_shl12_i_cast = sext i18 %p_shl12_i to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 105 [1/1] (0.80ns)   --->   "%buf_temp_qft_2_3_V = add i20 %p_shl11_i, %p_shl12_i_cast" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%p_shl14_i = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_3_0, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%p_shl15_i = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %buf_temp_dct_3_0, i2 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%p_shl15_i_cast = sext i18 %p_shl15_i to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 109 [1/1] (0.80ns)   --->   "%buf_temp_qft_3_0_V = add i20 %p_shl14_i, %p_shl15_i_cast" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%buf_temp_qft_3_1_V = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_3_1, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%p_shl_i = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_3_2, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%p_shl13_i = call i18 @_ssdm_op_BitConcatenate.i18.i16.i2(i16 %buf_temp_dct_3_2, i2 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%p_shl13_i_cast = sext i18 %p_shl13_i to i20" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 114 [1/1] (0.80ns)   --->   "%buf_temp_qft_3_2_V = add i20 %p_shl_i, %p_shl13_i_cast" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%buf_temp_qft_3_3_V = call i20 @_ssdm_op_BitConcatenate.i20.i16.i4(i16 %buf_temp_dct_3_3, i4 0)" [dct_hls/dct.cpp:59->dct_hls/dct.cpp:131]
+ST_2 : Operation 116 [1/1] (0.80ns)   --->   "%buf_temp_qft_0_3_V_1 = add i20 %buf_temp_qft_0_3_V, 10" [dct_hls/dct.cpp:136]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 117 [1/1] (0.80ns)   --->   "%buf_temp_qft_2_1_V_1 = add i20 %buf_temp_qft_2_1_V, 10" [dct_hls/dct.cpp:138]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 118 [1/1] (0.80ns)   --->   "%buf_temp_qft_1_2_V_1 = add i20 %buf_temp_qft_1_2_V, 10" [dct_hls/dct.cpp:144]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 119 [1/1] (0.80ns)   --->   "%buf_temp_qft_3_0_V_1 = add i20 %buf_temp_qft_3_0_V, 10" [dct_hls/dct.cpp:146]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 120 [1/1] (0.42ns)   --->   "%buf_temp_qft_3_0_V_2 = select i1 %tmp, i20 %buf_temp_qft_3_0_V, i20 %buf_temp_qft_3_0_V_1" [dct_hls/dct.cpp:134]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 121 [1/1] (0.42ns)   --->   "%buf_temp_qft_2_1_V_2 = select i1 %tmp, i20 %buf_temp_qft_2_1_V_1, i20 %buf_temp_qft_2_1_V" [dct_hls/dct.cpp:134]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 122 [1/1] (0.42ns)   --->   "%buf_temp_qft_1_2_V_2 = select i1 %tmp, i20 %buf_temp_qft_1_2_V, i20 %buf_temp_qft_1_2_V_1" [dct_hls/dct.cpp:134]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 123 [1/1] (0.42ns)   --->   "%buf_temp_qft_0_3_V_2 = select i1 %tmp, i20 %buf_temp_qft_0_3_V_1, i20 %buf_temp_qft_0_3_V" [dct_hls/dct.cpp:134]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 124 [1/1] (4.64ns)   --->   "%call_ret5 = call fastcc { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } @integer_idct(i20 %buf_temp_qft_0_0_V, i20 %buf_temp_qft_0_1_V, i20 %buf_temp_qft_0_2_V, i20 %buf_temp_qft_0_3_V_2, i20 %buf_temp_qft_1_0_V, i20 %buf_temp_qft_1_1_V, i20 %buf_temp_qft_1_2_V_2, i20 %buf_temp_qft_1_3_V, i20 %buf_temp_qft_2_0_V, i20 %buf_temp_qft_2_1_V_2, i20 %buf_temp_qft_2_2_V, i20 %buf_temp_qft_2_3_V, i20 %buf_temp_qft_3_0_V_2, i20 %buf_temp_qft_3_1_V, i20 %buf_temp_qft_3_2_V, i20 %buf_temp_qft_3_3_V)" [dct_hls/dct.cpp:150]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 125 [1/1] (0.00ns)   --->   "%buf_2d_out_0_0 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 0" [dct_hls/dct.cpp:150]
+ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%buf_2d_out_0_1 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 1" [dct_hls/dct.cpp:150]
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "%buf_2d_out_0_2 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 2" [dct_hls/dct.cpp:150]
+ST_2 : Operation 128 [1/1] (0.00ns)   --->   "%buf_2d_out_0_3 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 3" [dct_hls/dct.cpp:150]
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%buf_2d_out_1_0 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 4" [dct_hls/dct.cpp:150]
+ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%buf_2d_out_1_1 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 5" [dct_hls/dct.cpp:150]
+ST_2 : Operation 131 [1/1] (0.00ns)   --->   "%buf_2d_out_1_2 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 6" [dct_hls/dct.cpp:150]
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%buf_2d_out_1_3 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 7" [dct_hls/dct.cpp:150]
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%buf_2d_out_2_0 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 8" [dct_hls/dct.cpp:150]
+ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%buf_2d_out_2_1 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 9" [dct_hls/dct.cpp:150]
+ST_2 : Operation 135 [1/1] (0.00ns)   --->   "%buf_2d_out_2_2 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 10" [dct_hls/dct.cpp:150]
+ST_2 : Operation 136 [1/1] (0.00ns)   --->   "%buf_2d_out_2_3 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 11" [dct_hls/dct.cpp:150]
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%buf_2d_out_3_0 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 12" [dct_hls/dct.cpp:150]
+ST_2 : Operation 138 [1/1] (0.00ns)   --->   "%buf_2d_out_3_1 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 13" [dct_hls/dct.cpp:150]
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "%buf_2d_out_3_2 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 14" [dct_hls/dct.cpp:150]
+ST_2 : Operation 140 [1/1] (0.00ns)   --->   "%buf_2d_out_3_3 = extractvalue { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret5, 15" [dct_hls/dct.cpp:150]
+ST_2 : Operation 141 [1/1] (0.00ns)   --->   "%call_ret = call fastcc { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } @write_data(i8 %buf_2d_out_0_0, i8 %buf_2d_out_0_1, i8 %buf_2d_out_0_2, i8 %buf_2d_out_0_3, i8 %buf_2d_out_1_0, i8 %buf_2d_out_1_1, i8 %buf_2d_out_1_2, i8 %buf_2d_out_1_3, i8 %buf_2d_out_2_0, i8 %buf_2d_out_2_1, i8 %buf_2d_out_2_2, i8 %buf_2d_out_2_3, i8 %buf_2d_out_3_0, i8 %buf_2d_out_3_1, i8 %buf_2d_out_3_2, i8 %buf_2d_out_3_3)" [dct_hls/dct.cpp:153]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 142 [1/1] (0.00ns)   --->   "ret { i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8, i8 } %call_ret" [dct_hls/dct.cpp:154]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.46ns
+The critical path consists of the following:
+	wire read on port 'indata_15_read' [19]  (0 ns)
+	'call' operation ('call_ret3', dct_hls/dct.cpp:125) to 'read_data' [35]  (0 ns)
+	'call' operation ('call_ret2_i', dct_hls/dct.cpp:68->dct_hls/dct.cpp:129) to 'dct_step' [52]  (1.46 ns)
+
+ <State 2>: 8.64ns
+The critical path consists of the following:
+	'call' operation ('call_ret_i', dct_hls/dct.cpp:69->dct_hls/dct.cpp:129) to 'dct_step' [69]  (1.46 ns)
+	'mul' operation ('qdst[2][2].V', dct_hls/dct.cpp:59->dct_hls/dct.cpp:131) [115]  (2.53 ns)
+	'call' operation ('call_ret5', dct_hls/dct.cpp:150) to 'integer_idct' [139]  (4.64 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

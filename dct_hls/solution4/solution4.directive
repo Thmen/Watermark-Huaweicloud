@@ -1,0 +1,26 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="quantificat" label="RD_Loop_Row" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="quantificat" label="RD_Loop_Col" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="integer_idct" label="RD_Loop_Row" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="integer_idct" label="RD_Loop_Col" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="img_proc" label="Row_Loop" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="read_data" label="" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="write_data" label="" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

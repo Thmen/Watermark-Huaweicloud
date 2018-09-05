@@ -1,0 +1,25 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make: `csim.exe' is up to date.
+ Simulation start 
+ Din Dout 
+ mark#1: 34 
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+       119       119
+Test failed  !!!
+CRITICAL WARNING: [SIM 100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 3] *************** CSIM finish ***************

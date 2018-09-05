@@ -1,0 +1,255 @@
+
+
+================================================================
+== Vivado HLS Report for 'quantificat'
+================================================================
+* Date:           Fri Jul 20 11:48:10 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution3
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      3.55|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   10|   10|   10|   10|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+-----+-----+----------+-----------+-----------+------+----------+
+        |               |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- RD_Loop_Row  |    8|    8|         3|          2|          1|     4|    yes   |
+        +---------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 3, States = { 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	5  / (exitcond1)
+	3  / (!exitcond1)
+3 --> 
+	4  / true
+4 --> 
+	2  / true
+5 --> 
+
+* FSM state operations: 
+
+ <State 1> : 0.60ns
+ST_1 : Operation 6 [1/1] (0.60ns)   --->   "br label %1" [dct_hls/dct.cpp:55]
+
+ <State 2> : 0.59ns
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%qdst_1_1_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_14_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%qdst_1_0_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_1_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%qdst_1_2_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_15_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%qdst_1_3_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_16_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%qdst_0_3_V_write_a = phi i20 [ undef, %0 ], [ %newSel1, %_ifconv ]" [dct_hls/dct.cpp:55]
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%qdst_2_0_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_2_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%qdst_2_1_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_27_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%qdst_0_2_V_write_a = phi i20 [ undef, %0 ], [ %newSel3, %_ifconv ]" [dct_hls/dct.cpp:55]
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%qdst_2_2_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_28_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%qdst_2_3_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_29_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%qdst_0_1_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_016_1, %_ifconv ]" [dct_hls/dct.cpp:55]
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%qdst_3_0_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_3_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%qdst_3_1_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_310_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%qdst_0_0_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_0_1, %_ifconv ]" [dct_hls/dct.cpp:55]
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%qdst_3_2_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_311_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%qdst_3_3_V_write_a = phi i20 [ undef, %0 ], [ %qdst_V_312_1, %_ifconv ]" [dct_hls/dct.cpp:59]
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%r = phi i3 [ 0, %0 ], [ %r_1, %_ifconv ]"
+ST_2 : Operation 24 [1/1] (0.49ns)   --->   "%exitcond1 = icmp eq i3 %r, -4" [dct_hls/dct.cpp:55]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.57ns)   --->   "%r_1 = add i3 %r, 1" [dct_hls/dct.cpp:55]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %2, label %_ifconv" [dct_hls/dct.cpp:55]
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%tmp = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %r, i2 0)" [dct_hls/dct.cpp:55]
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_5 = zext i5 %tmp to i64" [dct_hls/dct.cpp:59]
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%qsrc_addr = getelementptr [16 x i16]* %qsrc, i64 0, i64 %tmp_5" [dct_hls/dct.cpp:59]
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_6 = or i5 %tmp, 1" [dct_hls/dct.cpp:55]
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_7 = call i64 @_ssdm_op_BitConcatenate.i64.i59.i5(i59 0, i5 %tmp_6)" [dct_hls/dct.cpp:59]
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%qsrc_addr_1 = getelementptr [16 x i16]* %qsrc, i64 0, i64 %tmp_7" [dct_hls/dct.cpp:59]
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_12 = trunc i3 %r to i2" [dct_hls/dct.cpp:55]
+ST_2 : Operation 34 [2/2] (0.59ns)   --->   "%qsrc_load = load i16* %qsrc_addr, align 2" [dct_hls/dct.cpp:59]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 35 [2/2] (0.59ns)   --->   "%qsrc_load_1 = load i16* %qsrc_addr_1, align 2" [dct_hls/dct.cpp:59]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 3> : 3.55ns
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_8 = or i5 %tmp, 2" [dct_hls/dct.cpp:55]
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_9 = call i64 @_ssdm_op_BitConcatenate.i64.i59.i5(i59 0, i5 %tmp_8)" [dct_hls/dct.cpp:59]
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%qsrc_addr_2 = getelementptr [16 x i16]* %qsrc, i64 0, i64 %tmp_9" [dct_hls/dct.cpp:59]
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_10 = or i5 %tmp, 3" [dct_hls/dct.cpp:55]
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%tmp_11 = call i64 @_ssdm_op_BitConcatenate.i64.i59.i5(i59 0, i5 %tmp_10)" [dct_hls/dct.cpp:59]
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%qsrc_addr_3 = getelementptr [16 x i16]* %qsrc, i64 0, i64 %tmp_11" [dct_hls/dct.cpp:59]
+ST_3 : Operation 42 [1/1] (0.39ns)   --->   "%tmp_1 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 25, i6 20, i6 25, i6 20, i2 %tmp_12)" [dct_hls/dct.cpp:55]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/2] (0.59ns)   --->   "%qsrc_load = load i16* %qsrc_addr, align 2" [dct_hls/dct.cpp:59]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_3 = sext i16 %qsrc_load to i20" [dct_hls/dct.cpp:59]
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_s = zext i6 %tmp_1 to i20" [dct_hls/dct.cpp:59]
+ST_3 : Operation 46 [1/1] (2.53ns)   --->   "%qdst_V_s = mul i20 %tmp_s, %tmp_3" [dct_hls/dct.cpp:59]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 47 [1/1] (0.34ns)   --->   "%sel_tmp = icmp eq i2 %tmp_12, -2" [dct_hls/dct.cpp:55]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.34ns)   --->   "%sel_tmp2 = icmp eq i2 %tmp_12, 1" [dct_hls/dct.cpp:55]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.34ns)   --->   "%sel_tmp4 = icmp eq i2 %tmp_12, 0" [dct_hls/dct.cpp:55]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.33ns)   --->   "%or_cond = or i1 %sel_tmp4, %sel_tmp2" [dct_hls/dct.cpp:55]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node newSel1)   --->   "%newSel = select i1 %sel_tmp, i20 %qdst_0_3_V_write_a, i20 %qdst_V_s" [dct_hls/dct.cpp:55]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.42ns) (out node of the LUT)   --->   "%newSel1 = select i1 %or_cond, i20 %qdst_0_3_V_write_a, i20 %newSel" [dct_hls/dct.cpp:55]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node newSel3)   --->   "%newSel2 = select i1 %sel_tmp, i20 %qdst_V_s, i20 %qdst_0_2_V_write_a" [dct_hls/dct.cpp:55]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.42ns) (out node of the LUT)   --->   "%newSel3 = select i1 %or_cond, i20 %qdst_0_2_V_write_a, i20 %newSel2" [dct_hls/dct.cpp:55]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 55 [1/1] (0.00ns) (grouped into LUT with out node qdst_V_016_1)   --->   "%sel_tmp1 = select i1 %sel_tmp2, i20 %qdst_V_s, i20 %qdst_0_1_V_write_a" [dct_hls/dct.cpp:55]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 56 [1/1] (0.42ns) (out node of the LUT)   --->   "%qdst_V_016_1 = select i1 %sel_tmp4, i20 %qdst_0_1_V_write_a, i20 %sel_tmp1" [dct_hls/dct.cpp:55]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 57 [1/1] (0.42ns)   --->   "%qdst_V_0_1 = select i1 %sel_tmp4, i20 %qdst_V_s, i20 %qdst_0_0_V_write_a" [dct_hls/dct.cpp:55]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.42> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 58 [1/1] (0.39ns)   --->   "%tmp_2 = call i6 @_ssdm_op_Mux.ap_auto.4i6.i2(i6 20, i6 16, i6 20, i6 16, i2 %tmp_12)" [dct_hls/dct.cpp:55]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 59 [1/2] (0.59ns)   --->   "%qsrc_load_1 = load i16* %qsrc_addr_1, align 2" [dct_hls/dct.cpp:59]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_3_1 = sext i16 %qsrc_load_1 to i20" [dct_hls/dct.cpp:59]
+ST_3 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_4_1 = zext i6 %tmp_2 to i20" [dct_hls/dct.cpp:59]
+ST_3 : Operation 62 [1/1] (2.53ns)   --->   "%qdst_V_1 = mul i20 %tmp_4_1, %tmp_3_1" [dct_hls/dct.cpp:59]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 63 [1/1] (0.39ns)   --->   "%qdst_V_16_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_1_3_V_write_a, i20 %qdst_1_3_V_write_a, i20 %qdst_1_3_V_write_a, i20 %qdst_V_1, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 64 [1/1] (0.39ns)   --->   "%qdst_V_15_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_1_2_V_write_a, i20 %qdst_1_2_V_write_a, i20 %qdst_V_1, i20 %qdst_1_2_V_write_a, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 65 [1/1] (0.39ns)   --->   "%qdst_V_1_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_V_1, i20 %qdst_1_0_V_write_a, i20 %qdst_1_0_V_write_a, i20 %qdst_1_0_V_write_a, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 66 [1/1] (0.39ns)   --->   "%qdst_V_14_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_1_1_V_write_a, i20 %qdst_V_1, i20 %qdst_1_1_V_write_a, i20 %qdst_1_1_V_write_a, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 67 [2/2] (0.59ns)   --->   "%qsrc_load_2 = load i16* %qsrc_addr_2, align 2" [dct_hls/dct.cpp:59]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_3 : Operation 68 [2/2] (0.59ns)   --->   "%qsrc_load_3 = load i16* %qsrc_addr_3, align 2" [dct_hls/dct.cpp:59]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+
+ <State 4> : 3.52ns
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str) nounwind" [dct_hls/dct.cpp:55]
+ST_4 : Operation 71 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str)" [dct_hls/dct.cpp:55]
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [dct_hls/dct.cpp:56]
+ST_4 : Operation 73 [1/2] (0.59ns)   --->   "%qsrc_load_2 = load i16* %qsrc_addr_2, align 2" [dct_hls/dct.cpp:59]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_3_2 = sext i16 %qsrc_load_2 to i20" [dct_hls/dct.cpp:59]
+ST_4 : Operation 75 [1/1] (2.53ns)   --->   "%qdst_V_2 = mul i20 %tmp_s, %tmp_3_2" [dct_hls/dct.cpp:59]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 76 [1/1] (0.39ns)   --->   "%qdst_V_29_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_2_3_V_write_a, i20 %qdst_2_3_V_write_a, i20 %qdst_2_3_V_write_a, i20 %qdst_V_2, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 77 [1/1] (0.39ns)   --->   "%qdst_V_28_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_2_2_V_write_a, i20 %qdst_2_2_V_write_a, i20 %qdst_V_2, i20 %qdst_2_2_V_write_a, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [1/1] (0.39ns)   --->   "%qdst_V_27_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_2_1_V_write_a, i20 %qdst_V_2, i20 %qdst_2_1_V_write_a, i20 %qdst_2_1_V_write_a, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [1/1] (0.39ns)   --->   "%qdst_V_2_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_V_2, i20 %qdst_2_0_V_write_a, i20 %qdst_2_0_V_write_a, i20 %qdst_2_0_V_write_a, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 80 [1/2] (0.59ns)   --->   "%qsrc_load_3 = load i16* %qsrc_addr_3, align 2" [dct_hls/dct.cpp:59]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.59> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%tmp_3_3 = sext i16 %qsrc_load_3 to i20" [dct_hls/dct.cpp:59]
+ST_4 : Operation 82 [1/1] (2.53ns)   --->   "%qdst_V_3 = mul i20 %tmp_4_1, %tmp_3_3" [dct_hls/dct.cpp:59]   --->   Core 61 'DSP48' <Latency = 0> <II = 1> <Delay = 2.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 83 [1/1] (0.39ns)   --->   "%qdst_V_312_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_3_3_V_write_a, i20 %qdst_3_3_V_write_a, i20 %qdst_3_3_V_write_a, i20 %qdst_V_3, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 84 [1/1] (0.39ns)   --->   "%qdst_V_311_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_3_2_V_write_a, i20 %qdst_3_2_V_write_a, i20 %qdst_V_3, i20 %qdst_3_2_V_write_a, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 85 [1/1] (0.39ns)   --->   "%qdst_V_310_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_3_1_V_write_a, i20 %qdst_V_3, i20 %qdst_3_1_V_write_a, i20 %qdst_3_1_V_write_a, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [1/1] (0.39ns)   --->   "%qdst_V_3_1 = call i20 @_ssdm_op_Mux.ap_auto.4i20.i2(i20 %qdst_V_3, i20 %qdst_3_0_V_write_a, i20 %qdst_3_0_V_write_a, i20 %qdst_3_0_V_write_a, i2 %tmp_12)" [dct_hls/dct.cpp:59]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str, i32 %tmp_4)" [dct_hls/dct.cpp:61]
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "br label %1" [dct_hls/dct.cpp:55]
+
+ <State 5> : 0.00ns
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } undef, i20 %qdst_0_0_V_write_a, 0" [dct_hls/dct.cpp:62]
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv, i20 %qdst_0_1_V_write_a, 1" [dct_hls/dct.cpp:62]
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_1, i20 %qdst_0_2_V_write_a, 2" [dct_hls/dct.cpp:62]
+ST_5 : Operation 92 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_2, i20 %qdst_0_3_V_write_a, 3" [dct_hls/dct.cpp:62]
+ST_5 : Operation 93 [1/1] (0.00ns)   --->   "%mrv_4 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_3, i20 %qdst_1_0_V_write_a, 4" [dct_hls/dct.cpp:62]
+ST_5 : Operation 94 [1/1] (0.00ns)   --->   "%mrv_5 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_4, i20 %qdst_1_1_V_write_a, 5" [dct_hls/dct.cpp:62]
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%mrv_6 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_5, i20 %qdst_1_2_V_write_a, 6" [dct_hls/dct.cpp:62]
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%mrv_7 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_6, i20 %qdst_1_3_V_write_a, 7" [dct_hls/dct.cpp:62]
+ST_5 : Operation 97 [1/1] (0.00ns)   --->   "%mrv_8 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_7, i20 %qdst_2_0_V_write_a, 8" [dct_hls/dct.cpp:62]
+ST_5 : Operation 98 [1/1] (0.00ns)   --->   "%mrv_9 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_8, i20 %qdst_2_1_V_write_a, 9" [dct_hls/dct.cpp:62]
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_9, i20 %qdst_2_2_V_write_a, 10" [dct_hls/dct.cpp:62]
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%mrv_10 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_s, i20 %qdst_2_3_V_write_a, 11" [dct_hls/dct.cpp:62]
+ST_5 : Operation 101 [1/1] (0.00ns)   --->   "%mrv_11 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_10, i20 %qdst_3_0_V_write_a, 12" [dct_hls/dct.cpp:62]
+ST_5 : Operation 102 [1/1] (0.00ns)   --->   "%mrv_12 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_11, i20 %qdst_3_1_V_write_a, 13" [dct_hls/dct.cpp:62]
+ST_5 : Operation 103 [1/1] (0.00ns)   --->   "%mrv_13 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_12, i20 %qdst_3_2_V_write_a, 14" [dct_hls/dct.cpp:62]
+ST_5 : Operation 104 [1/1] (0.00ns)   --->   "%mrv_14 = insertvalue { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_13, i20 %qdst_3_3_V_write_a, 15" [dct_hls/dct.cpp:62]
+ST_5 : Operation 105 [1/1] (0.00ns)   --->   "ret { i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20, i20 } %mrv_14" [dct_hls/dct.cpp:62]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.603ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('qdst[1][1].V', dct_hls/dct.cpp:59) with incoming values : ('qdst_V_14_1', dct_hls/dct.cpp:59) [4]  (0.603 ns)
+
+ <State 2>: 0.594ns
+The critical path consists of the following:
+	'phi' operation ('r') with incoming values : ('r', dct_hls/dct.cpp:55) [20]  (0 ns)
+	'getelementptr' operation ('qsrc_addr', dct_hls/dct.cpp:59) [31]  (0 ns)
+	'load' operation ('qsrc_load', dct_hls/dct.cpp:59) on array 'qsrc' [43]  (0.594 ns)
+
+ <State 3>: 3.55ns
+The critical path consists of the following:
+	'load' operation ('qsrc_load', dct_hls/dct.cpp:59) on array 'qsrc' [43]  (0.594 ns)
+	'mul' operation ('qdst_V_s', dct_hls/dct.cpp:59) [46]  (2.53 ns)
+	'select' operation ('qdst_V_0_1', dct_hls/dct.cpp:55) [57]  (0.42 ns)
+
+ <State 4>: 3.52ns
+The critical path consists of the following:
+	'load' operation ('qsrc_load_2', dct_hls/dct.cpp:59) on array 'qsrc' [67]  (0.594 ns)
+	'mul' operation ('qdst_V_2', dct_hls/dct.cpp:59) [69]  (2.53 ns)
+	'mux' operation ('qdst_V_28_1', dct_hls/dct.cpp:59) [71]  (0.393 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

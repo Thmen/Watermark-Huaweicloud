@@ -1,0 +1,24 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make: `csim.exe' is up to date.
+Files out.dat and out_golden.dat differ
+ Din Dout 
+        15         0         8        15
+       128         0         0       128
+        20     27775     27587        20
+       127     30122     30122       127
+         1     20108     27578         1
+       128       239     30122       128
+       128      -340    -30500       128
+       128       101     -7037       128
+       129     27925      4716       129
+         0     30123        64         0
+        56     17180      4716        56
+       128     30128        64       128
+        32      -276         0        32
+       128       101         0       128
+        12     25224     18488        11
+       128     30123        64       128
+Test failed  !!!
+CRITICAL WARNING: [SIM 100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 3] *************** CSIM finish ***************

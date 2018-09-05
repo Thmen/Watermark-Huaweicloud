@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vivado HLS Report for 'idct_step'
+================================================================
+* Date:           Fri Jul 20 11:48:14 2018
+
+* Version:        2017.4 (Build 2086221 on Fri Dec 15 21:13:33 MST 2017)
+* Project:        dct_hls
+* Solution:       solution3
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      1.50|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+---------+---------+-----+
+|       Name      | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++-----------------+---------+-------+---------+---------+-----+
+|DSP              |        -|      -|        -|        -|    -|
+|Expression       |        -|      -|        0|     1040|    -|
+|FIFO             |        -|      -|        -|        -|    -|
+|Instance         |        -|      -|        -|        -|    -|
+|Memory           |        -|      -|        -|        -|    -|
+|Multiplexer      |        -|      -|        -|        -|    -|
+|Register         |        -|      -|        -|        -|    -|
++-----------------+---------+-------+---------+---------+-----+
+|Total            |        0|      0|        0|     1040|    0|
++-----------------+---------+-------+---------+---------+-----+
+|Available        |     4320|   6840|  2364480|  1182240|  960|
++-----------------+---------+-------+---------+---------+-----+
+|Utilization (%)  |        0|      0|        0|    ~0   |    0|
++-----------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------+----------+-------+---+----+------------+------------+
+    |         Variable Name        | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------+----------+-------+---+----+------------+------------+
+    |addconv1_fu_542_p2            |     +    |      0|  0|  19|          20|          20|
+    |addconv2_fu_566_p2            |     +    |      0|  0|  19|          20|          20|
+    |addconv3_fu_590_p2            |     +    |      0|  0|  19|          20|          20|
+    |addconv4_fu_308_p2            |     +    |      0|  0|  27|          20|          20|
+    |addconv5_fu_344_p2            |     +    |      0|  0|  27|          20|          20|
+    |addconv6_fu_380_p2            |     +    |      0|  0|  27|          20|          20|
+    |addconv7_fu_416_p2            |     +    |      0|  0|  27|          20|          20|
+    |addconv_fu_518_p2             |     +    |      0|  0|  19|          20|          20|
+    |idst_0_0_V_write_a_fu_170_p2  |     +    |      0|  0|  27|          20|          20|
+    |idst_0_2_V_write_a_fu_446_p2  |     +    |      0|  0|  19|          20|          20|
+    |idst_1_0_V_write_a_fu_208_p2  |     +    |      0|  0|  27|          20|          20|
+    |idst_1_2_V_write_a_fu_464_p2  |     +    |      0|  0|  19|          20|          20|
+    |idst_2_0_V_write_a_fu_246_p2  |     +    |      0|  0|  27|          20|          20|
+    |idst_2_2_V_write_a_fu_482_p2  |     +    |      0|  0|  19|          20|          20|
+    |idst_3_0_V_write_a_fu_284_p2  |     +    |      0|  0|  27|          20|          20|
+    |idst_3_2_V_write_a_fu_500_p2  |     +    |      0|  0|  19|          20|          20|
+    |tmp12_fu_270_p2               |     +    |      0|  0|  19|          19|          19|
+    |tmp15_fu_226_p2               |     +    |      0|  0|  19|          19|          19|
+    |tmp16_fu_264_p2               |     +    |      0|  0|  19|          19|          19|
+    |tmp1_fu_150_p2                |     +    |      0|  0|  19|          19|          19|
+    |tmp2_fu_188_p2                |     +    |      0|  0|  19|          19|          19|
+    |tmp3_fu_156_p2                |     +    |      0|  0|  19|          19|          19|
+    |tmp6_fu_194_p2                |     +    |      0|  0|  19|          19|          19|
+    |tmp9_fu_232_p2                |     +    |      0|  0|  19|          19|          19|
+    |idst_0_1_V_write_a_fu_320_p2  |     -    |      0|  0|  19|          20|          20|
+    |idst_0_3_V_write_a_fu_524_p2  |     -    |      0|  0|  19|          20|          20|
+    |idst_1_1_V_write_a_fu_356_p2  |     -    |      0|  0|  19|          20|          20|
+    |idst_1_3_V_write_a_fu_548_p2  |     -    |      0|  0|  19|          20|          20|
+    |idst_2_1_V_write_a_fu_392_p2  |     -    |      0|  0|  19|          20|          20|
+    |idst_2_3_V_write_a_fu_572_p2  |     -    |      0|  0|  19|          20|          20|
+    |idst_3_1_V_write_a_fu_428_p2  |     -    |      0|  0|  19|          20|          20|
+    |idst_3_3_V_write_a_fu_596_p2  |     -    |      0|  0|  19|          20|          20|
+    |tmp_38_fu_350_p2              |     -    |      0|  0|  19|          20|          20|
+    |tmp_39_fu_386_p2              |     -    |      0|  0|  19|          20|          20|
+    |tmp_40_fu_422_p2              |     -    |      0|  0|  19|          20|          20|
+    |tmp_41_fu_434_p2              |     -    |      0|  0|  27|          20|          20|
+    |tmp_42_fu_440_p2              |     -    |      0|  0|  19|          20|          20|
+    |tmp_43_fu_452_p2              |     -    |      0|  0|  27|          20|          20|
+    |tmp_44_fu_458_p2              |     -    |      0|  0|  19|          20|          20|
+    |tmp_45_fu_470_p2              |     -    |      0|  0|  27|          20|          20|
+    |tmp_46_fu_476_p2              |     -    |      0|  0|  19|          20|          20|
+    |tmp_47_fu_488_p2              |     -    |      0|  0|  27|          20|          20|
+    |tmp_48_fu_494_p2              |     -    |      0|  0|  19|          20|          20|
+    |tmp_49_fu_512_p2              |     -    |      0|  0|  27|          20|          20|
+    |tmp_50_fu_536_p2              |     -    |      0|  0|  27|          20|          20|
+    |tmp_51_fu_560_p2              |     -    |      0|  0|  27|          20|          20|
+    |tmp_52_fu_584_p2              |     -    |      0|  0|  27|          20|          20|
+    |tmp_s_fu_314_p2               |     -    |      0|  0|  19|          20|          20|
+    +------------------------------+----------+-------+---+----+------------+------------+
+    |Total                         |          |      0|  0|1040|         952|         952|
+    +------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------+-----+-----+------------+-----------------+--------------+
+|    RTL Ports    | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++-----------------+-----+-----+------------+-----------------+--------------+
+|ap_ready         | out |    1| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_0      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_1      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_2      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_3      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_4      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_5      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_6      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_7      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_8      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_9      | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_10     | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_11     | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_12     | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_13     | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_14     | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|ap_return_15     | out |   20| ap_ctrl_hs |    idct_step    | return value |
+|isrc_0_0_V_read  |  in |   20|   ap_none  | isrc_0_0_V_read |    scalar    |
+|isrc_0_1_V_read  |  in |   20|   ap_none  | isrc_0_1_V_read |    scalar    |
+|isrc_0_2_V_read  |  in |   20|   ap_none  | isrc_0_2_V_read |    scalar    |
+|isrc_0_3_V_read  |  in |   20|   ap_none  | isrc_0_3_V_read |    scalar    |
+|isrc_1_0_V_read  |  in |   20|   ap_none  | isrc_1_0_V_read |    scalar    |
+|isrc_1_1_V_read  |  in |   20|   ap_none  | isrc_1_1_V_read |    scalar    |
+|isrc_1_2_V_read  |  in |   20|   ap_none  | isrc_1_2_V_read |    scalar    |
+|isrc_1_3_V_read  |  in |   20|   ap_none  | isrc_1_3_V_read |    scalar    |
+|isrc_2_0_V_read  |  in |   20|   ap_none  | isrc_2_0_V_read |    scalar    |
+|isrc_2_1_V_read  |  in |   20|   ap_none  | isrc_2_1_V_read |    scalar    |
+|isrc_2_2_V_read  |  in |   20|   ap_none  | isrc_2_2_V_read |    scalar    |
+|isrc_2_3_V_read  |  in |   20|   ap_none  | isrc_2_3_V_read |    scalar    |
+|isrc_3_0_V_read  |  in |   20|   ap_none  | isrc_3_0_V_read |    scalar    |
+|isrc_3_1_V_read  |  in |   20|   ap_none  | isrc_3_1_V_read |    scalar    |
+|isrc_3_2_V_read  |  in |   20|   ap_none  | isrc_3_2_V_read |    scalar    |
+|isrc_3_3_V_read  |  in |   20|   ap_none  | isrc_3_3_V_read |    scalar    |
++-----------------+-----+-----+------------+-----------------+--------------+
+
